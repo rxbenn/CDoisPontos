@@ -33,8 +33,8 @@
               Sobre a <span class="brand-accent">CDoisPontos</span>
             </h1>
             <p class="sobre-hero-text mb-3">
-              Desde 2003 na Praia da Amorosa, somos uma loja de tecnologia, reparação e muito mais. <br>
-              Queremos ser a solução para ti, seja qual for a tua necessidade.
+              Desde 2003 na Praia da Amorosa, somos uma loja de tecnologia, reparação e muito mais.
+              O nosso objetivo é ser a solução certa, seja qual for a tua necessidade.
             </p>
             <div class="sobre-hero-pills">
               <span class="sobre-pill"><i class="bi bi-tools me-1"></i>Reparações</span>
@@ -66,7 +66,7 @@
     <section class="sobre-section">
       <div class="container">
         <div class="row g-4 align-items-stretch">
-          <div class="col-lg-7">
+          <div class="col-lg-7 animate-soft">
             <article class="info-card sobre-card h-100">
               <h2 class="mb-3">Quem somos</h2>
               <p class="mb-3">
@@ -83,7 +83,7 @@
             </article>
           </div>
 
-          <div class="col-lg-5">
+          <div class="col-lg-5 animate-soft">
             <aside class="info-card sobre-card h-100">
               <h3 class="mb-3">O que nos define</h3>
               <ul class="list-unstyled mb-3 small sobre-list">
@@ -101,13 +101,13 @@
       </div>
     </section>
 
-    <!-- ÁREAS PRINCIPAIS -->
+    <!-- SERVIÇOS DETALHADOS -->
     <section class="sobre-section sobre-areas">
       <div class="container">
         <div class="text-center mb-4">
-          <h2 class="mb-1">O que encontras na CDoisPontos</h2>
+          <h2 class="mb-1">Serviços da CDoisPontos</h2>
           <p class="text-muted small mb-0">
-            Produtos, lazer e assistência técnica num só espaço
+            Uma visão mais completa das áreas em que podemos ajudar-te
           </p>
         </div>
 
@@ -115,12 +115,11 @@
           <div class="col-md-4">
             <div class="highlight-card sobre-highlight h-100">
               <div class="highlight-icon-wrap">
-                <i class="bi bi-bag-check-fill highlight-icon"></i>
+                <i class="bi bi-phone highlight-icon"></i>
               </div>
-              <h3 class="highlight-title">Loja de produtos</h3>
+              <h3 class="highlight-title">Reparação de telemóveis</h3>
               <p class="highlight-text mb-0">
-                Mobilidade elétrica, telemóveis, tablets, TVs, gadgets, espaço kids, ferramentas,
-                eletrodomésticos e muito mais.
+                Troca de ecrãs, baterias, conetores e outros componentes, com diagnóstico claro e acompanhamento.
               </p>
             </div>
           </div>
@@ -128,12 +127,11 @@
           <div class="col-md-4">
             <div class="highlight-card sobre-highlight h-100">
               <div class="highlight-icon-wrap">
-                <i class="bi bi-tools highlight-icon"></i>
+                <i class="bi bi-laptop highlight-icon"></i>
               </div>
-              <h3 class="highlight-title">Reparações especializadas</h3>
+              <h3 class="highlight-title">Reparação de computadores</h3>
               <p class="highlight-text mb-0">
-                Reparações de mobile, informática, multimédia, gaming, áudio, indústria
-                e veículos elétricos.
+                Limpeza interna, otimização de sistema, upgrades de SSD/RAM e reparações de hardware.
               </p>
             </div>
           </div>
@@ -141,11 +139,47 @@
           <div class="col-md-4">
             <div class="highlight-card sobre-highlight h-100">
               <div class="highlight-icon-wrap">
-                <i class="bi bi-emoji-smile-fill highlight-icon"></i>
+                <i class="bi bi-headset highlight-icon"></i>
               </div>
-              <h3 class="highlight-title">Experiência do cliente</h3>
+              <h3 class="highlight-title">Assistência técnica</h3>
               <p class="highlight-text mb-0">
-                Atendimento próximo, comunicação clara e foco total na tua satisfação.
+                Suporte na configuração de equipamentos, software, redes domésticas e pequenas empresas.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="highlight-card sobre-highlight h-100">
+              <div class="highlight-icon-wrap">
+                <i class="bi bi-usb-symbol highlight-icon"></i>
+              </div>
+              <h3 class="highlight-title">Venda de acessórios</h3>
+              <p class="highlight-text mb-0">
+                Cabos, carregadores, capas, periféricos, áudio e outros acessórios para o teu dia a dia.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="highlight-card sobre-highlight h-100">
+              <div class="highlight-icon-wrap">
+                <i class="bi bi-pc-display-horizontal highlight-icon"></i>
+              </div>
+              <h3 class="highlight-title">Equipamentos informáticos</h3>
+              <p class="highlight-text mb-0">
+                Computadores, monitores e soluções tecnológicas pensadas para casa, estudo e trabalho.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="highlight-card sobre-highlight h-100">
+              <div class="highlight-icon-wrap">
+                <i class="bi bi-lightning-charge highlight-icon"></i>
+              </div>
+              <h3 class="highlight-title">Outros serviços tecnológicos</h3>
+              <p class="highlight-text mb-0">
+                Recuperação de dados, configuração de backups, consultoria e soluções à medida.
               </p>
             </div>
           </div>

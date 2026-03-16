@@ -23,23 +23,27 @@
 
         <!-- Texto -->
         <div class="col-lg-6">
-          <span class="hero-badge">Loja CDoisPontos</span>
+          <span class="hero-badge">CDoisPontos · Praia da Amorosa</span>
           <h1 class="hero-title mt-3">
             Tudo o que procuras, <span class="brand-accent">encontras!</span>
           </h1>
           <p class="hero-subtitle">
-            Localizada na <strong>Areosa</strong>, a CDoisPontos é especialista em reparação e manutenção de equipamentos eletrónicos e informáticos, oferecendo também diversos produtos de tecnologia e acessórios.
+            Localizada na <strong>Areosa</strong>, a CDoisPontos é uma loja de tecnologia e informática com <strong>reparação de equipamentos</strong>, venda de
+            <strong>acessórios</strong> e <strong>assistência técnica</strong> personalizada.
           </p>
-          <div class="hero-actions mt-4">
-            <a href="#produtos-destaque" class="btn btn-light me-2">Ver produtos</a>
-            <a href="sobre.php" class="btn btn-outline-light">Saber mais sobre a loja</a>
+          <div class="hero-actions mt-4 d-flex flex-wrap gap-2">
+            <a href="#servicos" class="btn btn-light">
+              <i class="bi bi-tools me-1"></i> Ver serviços
+            </a>
+            <a href="#localizacao-contactos" class="btn btn-outline-light">
+              <i class="bi bi-telephone-outbound me-1"></i> Contactar
+            </a>
           </div>
         </div>
 
         <!-- Imagem / mockup -->
         <div class="col-lg-6">
           <div class="hero-card shadow-lg">
-            <!-- Troca pela foto da loja ou montagem de produtos -->
             <img src="imagens/logo.png" alt="CDoisPontos" class="img-fluid hero-image">
           </div>
         </div>
@@ -48,30 +52,29 @@
     </div>
   </section>
 
-   <!-- DESTAQUES DA LOJA (CARDS MODERNOS) -->
-  <section class="py-4" id="o-que-fazemos">
+  <!-- SERVIÇOS PRINCIPAIS -->
+  <section id="servicos">
     <div class="container">
-
-      <div class="text-center mb-3">
-        <h2 class="mb-1">O que fazemos</h2>
-        <p class="text-muted small mb-0">Principais áreas da CDoisPontos</p>
+      <div class="text-center mb-4">
+        <h2 class="mb-1">Serviços da CDoisPontos</h2>
+        <p class="text-muted small mb-0">Três áreas principais onde podemos ajudar-te</p>
       </div>
-      <div class="row g-3">
 
-        <div class="col-md-4">
-          <div class="highlight-card h-100">
+      <div class="row g-4">
+        <div class="col-md-4 animate-soft">
+          <article class="highlight-card h-100">
             <div class="highlight-icon-wrap">
               <i class="bi bi-tools highlight-icon"></i>
             </div>
             <h3 class="highlight-title">Reparação de equipamentos</h3>
             <p class="highlight-text mb-0">
-              Diagnóstico e reparação de computadores, portáteis e outros dispositivos eletrónicos.
+              Substituição de ecrãs, baterias, conetores e outros componentes, sempre com diagnóstico transparente.
             </p>
-          </div>
+          </article>
         </div>
 
-        <div class="col-md-4">
-          <div class="highlight-card h-100">
+        <div class="col-md-4 animate-soft">
+          <article class="highlight-card h-100">
             <div class="highlight-icon-wrap">
               <i class="bi bi-laptop highlight-icon"></i>
             </div>
@@ -79,46 +82,48 @@
             <p class="highlight-text mb-0">
               Equipamentos e periféricos selecionados para uso diário e profissional.
             </p>
-          </div>
+          </article>
         </div>
 
-        <div class="col-md-4">
-          <div class="highlight-card h-100">
+        <div class="col-md-4 animate-soft">
+          <article class="highlight-card h-100">
             <div class="highlight-icon-wrap">
               <i class="bi bi-headset highlight-icon"></i>
             </div>
-            <h3 class="highlight-title">Assistência técnica especializada</h3>
+            <h3 class="highlight-title">Assistência técnica</h3>
             <p class="highlight-text mb-0">
-              Aconselhamento e suporte técnico próximo para encontrares sempre a melhor solução.
+              Aconselhamento especializado e apoio na configuração de equipamentos e software.
             </p>
-          </div>
+          </article>
         </div>
-
       </div>
     </div>
   </section>
   
   <!-- PRODUTOS EM DESTAQUE (CARDS SIMPLES E MODERNOS) -->
-  <section id="produtos-destaque" class="py-5">
+  <section id="produtos-destaque">
     <div class="container">
       <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
         <div>
           <h2 class="mb-1">Produtos em destaque</h2>
-          <p class="text-muted mb-0 small">Algumas opções populares da nossa loja</p>
+          <p class="text-muted mb-0 small">Alguns exemplos de produtos que podes encontrar na loja</p>
         </div>
-        <a href="#" class="text-primary small">Ver todos os produtos</a>
+        <a href="produtos.php" class="text-primary small d-flex align-items-center">
+          Ver catálogo completo
+          <i class="bi bi-arrow-right-short ms-1"></i>
+        </a>
       </div>
 
       <div class="row g-4">
 
         <!-- PRODUTO 1 -->
-        <div class="col-sm-6 col-lg-3">
+        <div class="col-sm-6 col-lg-3 animate-soft">
           <article class="product-card h-100">
             <img src="imagens/produto1.jpg" class="card-img-top" alt="Produto 1">
             <div class="product-body">
-              <h5 class="product-title">Produto 1</h5>
+              <h5 class="product-title">Auriculares Bluetooth</h5>
               <p class="product-text">
-                Pequena descrição do produto 1 (2 linhas chegam).
+                Som nítido, ligação rápida e autonomia para todo o dia.
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <span class="product-price">€ 19,90</span>
@@ -129,13 +134,13 @@
         </div>
 
         <!-- PRODUTO 2 -->
-        <div class="col-sm-6 col-lg-3">
+        <div class="col-sm-6 col-lg-3 animate-soft">
           <article class="product-card h-100">
             <img src="imagens/produto2.jpg" class="card-img-top" alt="Produto 2">
             <div class="product-body">
-              <h5 class="product-title">Produto 2</h5>
+              <h5 class="product-title">Rato sem fios</h5>
               <p class="product-text">
-                Pequena descrição do produto 2.
+                Ideal para trabalho e estudo com ergonomia e precisão.
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <span class="product-price">€ 24,90</span>
@@ -146,13 +151,13 @@
         </div>
 
         <!-- PRODUTO 3 -->
-        <div class="col-sm-6 col-lg-3">
+        <div class="col-sm-6 col-lg-3 animate-soft">
           <article class="product-card h-100">
             <img src="imagens/produto3.jpg" class="card-img-top" alt="Produto 3">
             <div class="product-body">
-              <h5 class="product-title">Produto 3</h5>
+              <h5 class="product-title">Teclado mecânico</h5>
               <p class="product-text">
-                Pequena descrição do produto 3.
+                Teclado compacto com iluminação e switches confortáveis.
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <span class="product-price">€ 14,90</span>
@@ -163,13 +168,13 @@
         </div>
 
         <!-- PRODUTO 4 -->
-        <div class="col-sm-6 col-lg-3">
+        <div class="col-sm-6 col-lg-3 animate-soft">
           <article class="product-card h-100">
             <img src="imagens/produto4.jpg" class="card-img-top" alt="Produto 4">
             <div class="product-body">
-              <h5 class="product-title">Produto 4</h5>
+              <h5 class="product-title">Carregador rápido</h5>
               <p class="product-text">
-                Pequena descrição do produto 4.
+                Compatível com vários dispositivos, perfeito para o dia a dia.
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <span class="product-price">€ 29,90</span>
@@ -187,7 +192,7 @@
 
 
 <!-- Localização e contactos -->
-<section class="py-5" id="localizacao-contactos">
+<section id="localizacao-contactos">
   <div class="container">
     <div class="row g-4">
       <div class="col-lg-10 mx-auto">
@@ -259,7 +264,7 @@
               </div>
 
               <!-- Facebook -->
-              <div class="contact-line mb-0">
+              <div class="contact-line mb-2">
                 <div class="contact-icon facebook-icon">
                   <i class="bi bi-facebook"></i>
                 </div>
@@ -269,6 +274,19 @@
                     <a href="https://www.facebook.com/cdoispontos" target="_blank" class="contact-link">
                       Visite a nossa página
                     </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Horário (visual mais leve) -->
+              <div class="contact-line mb-0 mt-1">
+                <div class="contact-icon">
+                  <i class="bi bi-clock-history"></i>
+                </div>
+                <div class="contact-content">
+                  <div class="contact-label">Horário</div>
+                  <div class="contact-value small text-muted">
+                    Seg a Sex: 9h30 – 12h30 / 14h00 – 19h00 &nbsp;·&nbsp; Sáb e Dom: Encerrado
                   </div>
                 </div>
               </div>

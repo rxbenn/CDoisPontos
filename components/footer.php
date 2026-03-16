@@ -1,4 +1,4 @@
-<footer class="site-footer mt-5">
+<footer class="site-footer">
   <div class="footer-main py-5">
     <div class="container">
       <div class="row g-4 align-items-start">

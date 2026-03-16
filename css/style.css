@@ -1,16 +1,38 @@
 html{
   scroll-behavior: smooth;
-  scroll-padding-top: 40px; /* compensar o header sticky */
+  scroll-padding-top: 40px; /* compensar o header sticky (altura aproximada da navbar) */
+}
+
+body {
+  background: #061827;   /* azul profundo da marca como base */
+  color: #0b1925;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+main{
+  background: #f6f8fa;   /* fundo claro para o conteúdo */
+}
+
+section{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+section + section{
+  border-top: 1px solid rgba(13,59,92,0.05);
 }
 
 a:focus-visible,
 button:focus-visible,
 .btn:focus-visible{
-  outline: 3px solid rgba(245,124,0,0.6);
+  outline: 3px solid rgba(245,124,0,0.8);
   outline-offset: 3px;
   border-radius: 12px;
 }
 
+.brand-accent{
+  color: #f57c00;
+}
 
 /*===== HEADER =====*/
 .site-header{
@@ -41,10 +63,6 @@ button:focus-visible,
   color: #ffffff;
   letter-spacing: 0.2px;
   position: relative;
-}
-
-.brand-accent{
-  color: #f57c00;
 }
 
 /* ===== LINKS DO MENU ===== */
@@ -124,12 +142,7 @@ button:focus-visible,
   line-height: 1.2;
 }
 
-/* ===== HERO MODERNO f7f9fc===== */
-
-body {
-  background: #f6f8fa;   /* fundo suave para todo o site */
-}
-
+/* ===== HERO MODERNO ===== */
 .hero-section{
   background: radial-gradient(circle at top left, #f57c00 0, #0d3b5c 40%, #061827 100%);
   padding: 50px 0;
@@ -349,6 +362,29 @@ body {
   }
 }
 
+/* Pequena animação de entrada para colunas/cards reutilizável */
+@keyframes fadeUpSoft{
+  from{
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-soft{
+  opacity: 0;
+  animation: fadeUpSoft 0.6s ease forwards;
+}
+
+/* Pequenos delays consoante a posição na row */
+.row .animate-soft:nth-child(1){ animation-delay: 0.05s; }
+.row .animate-soft:nth-child(2){ animation-delay: 0.12s; }
+.row .animate-soft:nth-child(3){ animation-delay: 0.18s; }
+.row .animate-soft:nth-child(4){ animation-delay: 0.24s; }
+
 /* ONDE ESTAMOS */
 /* ===== CARDS DE INFO (sobre / localização) ===== */
 
@@ -370,7 +406,7 @@ body {
 /* ===== LINHAS ===== */
 .contact-line{
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
   border-radius: 12px;
   padding: 6px 8px;
@@ -525,7 +561,7 @@ body {
 .map-wrapper-location{
   position: relative;
   width: 100%;
-  padding-bottom: 60%;   /* podes brincar entre 50% e 65% até ficar como gostas */
+  padding-bottom: 70%;   /* altura um pouco maior em desktop */
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 10px 24px rgba(0,0,0,0.10);
@@ -611,7 +647,7 @@ body {
   color: rgba(255,255,255,0.88);
   background: radial-gradient(circle at top left, #0d3b5c 0, #061827 55%, #020b13 100%);
   border-top: 1px solid rgba(255,255,255,0.12);
-  margin-top: 40px;
+  margin-top: 0px;
 }
 
 /* Parte principal */
@@ -1054,9 +1090,9 @@ body {
   margin-bottom: 2px;
 }
 
-/* Na página Sobre, encostar um pouco mais o footer ao conteúdo */
+/* Na página Sobre, usar o mesmo espaçamento de footer que no resto do site */
 .sobre-page .site-footer{
-  margin-top: 20px; /* em vez de 40px */
+  margin-top: 0;
 }
 
 /* Animações */
@@ -1091,6 +1127,11 @@ body {
 }
 
 @media (max-width: 576px){
+  section{
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
+  }
+
   .sobre-section{
     padding: 22px 0;
   }
