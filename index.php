@@ -22,27 +22,27 @@
       <div class="row align-items-center g-4">
 
         <!-- Texto -->
-        <div class="col-lg-6">
+        <div class="col-12 col-lg-6 text-center text-lg-start">
           <span class="hero-badge">CDoisPontos · Praia da Amorosa</span>
           <h1 class="hero-title mt-3">
             Tudo o que procuras, <span class="brand-accent">encontras!</span>
           </h1>
-          <p class="hero-subtitle">
+          <p class="hero-subtitle mb-4 mx-auto mx-lg-0" style="max-width: 500px;">
             Localizada na <strong>Areosa</strong>, a CDoisPontos é uma loja de tecnologia e informática com <strong>reparação de equipamentos</strong>, venda de
             <strong>acessórios</strong> e <strong>assistência técnica</strong> personalizada.
           </p>
-          <div class="hero-actions mt-4 d-flex flex-wrap gap-2">
-            <a href="#servicos" class="btn btn-light">
+          <div class="hero-actions mt-4 d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
+            <a href="sobre.php#servicos" class="btn btn-light px-4 py-2 fw-semibold">
               <i class="bi bi-tools me-1"></i> Ver serviços
             </a>
-            <a href="#localizacao-contactos" class="btn btn-outline-light">
+            <a href="#localizacao-contactos" class="btn btn-outline-light px-4 py-2 fw-semibold">
               <i class="bi bi-telephone-outbound me-1"></i> Contactar
             </a>
           </div>
         </div>
 
         <!-- Imagem / mockup -->
-        <div class="col-lg-6">
+        <div class="col-lg-6 text-center">
           <div class="hero-card shadow-lg">
             <img src="imagens/logo.png" alt="CDoisPontos" class="img-fluid hero-image">
           </div>
@@ -100,7 +100,7 @@
     </div>
   </section>
   
-  <!-- PRODUTOS EM DESTAQUE (CARDS SIMPLES E MODERNOS) -->
+ <!-- PRODUTOS EM DESTAQUE (CARDS SIMPLES E MODERNOS) 
   <section id="produtos-destaque">
     <div class="container">
       <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
@@ -116,10 +116,10 @@
 
       <div class="row g-4">
 
-        <!-- PRODUTO 1 -->
-        <div class="col-sm-6 col-lg-3 animate-soft">
+    
+        <div class="col-6 col-lg-3 animate-soft">
           <article class="product-card h-100">
-            <img src="imagens/produto1.jpg" class="card-img-top" alt="Produto 1">
+            <img src="imagens/produto1.png" class="card-img-top" alt="Produto 1">
             <div class="product-body">
               <h5 class="product-title">Auriculares Bluetooth</h5>
               <p class="product-text">
@@ -133,10 +133,10 @@
           </article>
         </div>
 
-        <!-- PRODUTO 2 -->
-        <div class="col-sm-6 col-lg-3 animate-soft">
+      
+        <div class="col-6 col-lg-3 animate-soft">
           <article class="product-card h-100">
-            <img src="imagens/produto2.jpg" class="card-img-top" alt="Produto 2">
+            <img src="imagens/produto2.png" class="card-img-top" alt="Produto 2">
             <div class="product-body">
               <h5 class="product-title">Rato sem fios</h5>
               <p class="product-text">
@@ -150,10 +150,10 @@
           </article>
         </div>
 
-        <!-- PRODUTO 3 -->
-        <div class="col-sm-6 col-lg-3 animate-soft">
+      
+        <div class="col-6 col-lg-3 animate-soft">
           <article class="product-card h-100">
-            <img src="imagens/produto3.jpg" class="card-img-top" alt="Produto 3">
+            <img src="imagens/produto3.png" class="card-img-top" alt="Produto 3">
             <div class="product-body">
               <h5 class="product-title">Teclado mecânico</h5>
               <p class="product-text">
@@ -167,10 +167,10 @@
           </article>
         </div>
 
-        <!-- PRODUTO 4 -->
-        <div class="col-sm-6 col-lg-3 animate-soft">
+      
+        <div class="col-6 col-lg-3 animate-soft">
           <article class="product-card h-100">
-            <img src="imagens/produto4.jpg" class="card-img-top" alt="Produto 4">
+            <img src="imagens/produto4.png" class="card-img-top" alt="Produto 4">
             <div class="product-body">
               <h5 class="product-title">Carregador rápido</h5>
               <p class="product-text">
@@ -186,7 +186,7 @@
 
       </div>
     </div>
-  </section>
+  </section>  -->
 
 
 
@@ -228,7 +228,7 @@
                 <div class="contact-content">
                   <div class="contact-label">Telefone</div>
                   <div class="contact-value">
-                    <strong>964 395 628</strong>
+                    939 982 878
                   </div>
                 </div>
               </div>
@@ -256,7 +256,7 @@
                 <div class="contact-content">
                   <div class="contact-label">WhatsApp</div>
                   <div class="contact-value">
-                    <a href="https://wa.me/351964395628" target="_blank" class="contact-link">
+                    <a href="https://wa.me/351939982878" target="_blank" class="contact-link">
                       Fale connosco agora
                     </a>
                   </div>
@@ -278,15 +278,30 @@
                 </div>
               </div>
 
-              <!-- Horário (visual mais leve) -->
-              <div class="contact-line mb-0 mt-1">
+              <!-- BOTÃO PARA FORMULÁRIO -->
+              <div class="contact-line mb-2">
+                <div class="contact-icon" style="background: rgba(245, 124, 0, 0.1); color: #f57c00;">
+                  <i class="bi bi-chat-dots-fill"></i>
+                </div>
+                <div class="contact-content">
+                  <div class="contact-label">Mensagens</div>
+                  <div class="contact-value">
+                    <a href="contacto.php" class="btn btn-warning rounded-pill btn-sm px-4 fw-bold shadow-sm border-0 mt-1">
+                      Enviar Mensagem Direta
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Horário -->
+              <div class="contact-line mb-0">
                 <div class="contact-icon">
                   <i class="bi bi-clock-history"></i>
                 </div>
                 <div class="contact-content">
                   <div class="contact-label">Horário</div>
                   <div class="contact-value small text-muted">
-                    Seg a Sex: 9h30 – 12h30 / 14h00 – 19h00 &nbsp;·&nbsp; Sáb e Dom: Encerrado
+                    Seg a Sex: 9h30 – 12h30 / 14h00 – 19h00 <br> Sáb e Dom: Encerrado
                   </div>
                 </div>
               </div>

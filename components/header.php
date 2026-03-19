@@ -35,15 +35,11 @@
               href="sobre.php">Sobre</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link <?php echo (basename($_SERVER['PHP_SELF'])==='produtos.php') ? 'active' : ''; ?>"
-              href="produtos.php">Produtos</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="index.php#localizacao-contactos">Contactos</a>
         </li>
         <li class="nav-item ms-lg-2">
           <a class="btn btn-warning btn-sm px-3 rounded-pill"
-            href="https://wa.me/351964395628"
+            href="https://wa.me/351939982878"
             target="_blank">
             <i class="bi bi-whatsapp me-1"></i> WhatsApp
           </a>

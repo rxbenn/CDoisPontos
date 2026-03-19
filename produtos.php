@@ -50,9 +50,9 @@
 
         <!-- Grelha de produtos -->
         <div class="row g-4">
-          <div class="col-sm-6 col-lg-3 animate-soft">
+          <div class="col-6 col-lg-3 animate-soft">
             <article class="product-card h-100">
-              <img src="imagens/produto1.jpg" class="card-img-top" alt="Auriculares Bluetooth">
+              <img src="imagens/produto1.png" class="card-img-top" alt="Auriculares Bluetooth">
               <div class="product-body">
                 <h5 class="product-title">Auriculares Bluetooth</h5>
                 <p class="product-text">
@@ -66,9 +66,9 @@
             </article>
           </div>
 
-          <div class="col-sm-6 col-lg-3 animate-soft">
+          <div class="col-6 col-lg-3 animate-soft">
             <article class="product-card h-100">
-              <img src="imagens/produto2.jpg" class="card-img-top" alt="Rato sem fios">
+              <img src="imagens/produto2.png" class="card-img-top" alt="Rato sem fios">
               <div class="product-body">
                 <h5 class="product-title">Rato sem fios</h5>
                 <p class="product-text">
@@ -82,9 +82,9 @@
             </article>
           </div>
 
-          <div class="col-sm-6 col-lg-3 animate-soft">
+          <div class="col-6 col-lg-3 animate-soft">
             <article class="product-card h-100">
-              <img src="imagens/produto3.jpg" class="card-img-top" alt="Teclado mecânico">
+              <img src="imagens/produto3.png" class="card-img-top" alt="Teclado mecânico">
               <div class="product-body">
                 <h5 class="product-title">Teclado mecânico</h5>
                 <p class="product-text">
@@ -98,9 +98,9 @@
             </article>
           </div>
 
-          <div class="col-sm-6 col-lg-3 animate-soft">
+          <div class="col-6 col-lg-3 animate-soft">
             <article class="product-card h-100">
-              <img src="imagens/produto4.jpg" class="card-img-top" alt="Carregador rápido">
+              <img src="imagens/produto4.png" class="card-img-top" alt="Carregador rápido">
               <div class="product-body">
                 <h5 class="product-title">Carregador rápido</h5>
                 <p class="product-text">

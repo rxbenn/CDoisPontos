@@ -4,7 +4,7 @@
       <div class="row g-4 align-items-start">
 
         <!-- Coluna 1: Logo + descrição -->
-        <div class="col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-4">
           <div class="d-flex align-items-center mb-3">
             <img src="imagens/logo.png" alt="CDoisPontos" class="footer-logo">
             <span class="footer-brand ms-2">
@@ -32,13 +32,21 @@
           <ul class="footer-links list-unstyled mb-0">
             <li><a href="index.php" class="footer-link">Início</a></li>
             <li><a href="sobre.php" class="footer-link">Sobre</a></li>
-            <li><a href="produtos.php" class="footer-link">Produtos</a></li>
             <li><a href="index.php#localizacao-contactos" class="footer-link">Contactos</a></li>
           </ul>
         </div>
 
-        <!-- Coluna 3: Contactos resumo -->
-        <div class="col-6 col-md-3 col-lg-3">
+        <!-- Coluna 3: Horário (Apenas visível em Mobile aqui) -->
+        <div class="col-6 d-md-none">
+          <h5 class="footer-title">Horário</h5>
+          <ul class="footer-hours list-unstyled mb-0">
+            <li>Seg a Sex: <br>9h30–12h30 <br>14h00–19h00</li>
+            <li class="mt-2">Sáb e Dom: <br>Encerrado</li>
+          </ul>
+        </div>
+
+        <!-- Coluna 4: Contactos resumo -->
+        <div class="col-12 col-md-4 col-lg-3">
           <h5 class="footer-title">Contactos</h5>
           <ul class="footer-contact list-unstyled mb-0">
             <li class="footer-contact-item">
@@ -47,25 +55,38 @@
             </li>
             <li class="footer-contact-item">
               <i class="bi bi-telephone-fill me-2"></i>
-              <a href="tel:351964395628" class="footer-link">964 395 628</a>
+              <a href="tel:+351939982878" class="footer-link">939 982 878</a>
             </li>
             <li class="footer-contact-item">
               <i class="bi bi-envelope-fill me-2"></i>
-              <a href="mailto:cdoispontos.amorosa@gmail.com" class="footer-link">
+              <a href="mailto:cdoispontos.amorosa@gmail.com" class="footer-link text-break">
                 cdoispontos.amorosa@gmail.com
               </a>
             </li>
             <li class="footer-contact-item">
               <i class="bi bi-whatsapp me-2"></i>
-              <a href="https://wa.me/351964395628" target="_blank" class="footer-link">
+              <a href="https://wa.me/351939982878" target="_blank" class="footer-link">
                 Fale connosco no WhatsApp
               </a>
             </li>
           </ul>
+          
+          <!-- Segue-nos visível logo abaixo dos contactos no Mobile -->
+          <div class="d-md-none mt-4">
+            <h5 class="footer-title mb-2">Segue-nos</h5>
+            <div class="footer-social d-flex flex-wrap gap-2">
+              <a href="https://www.facebook.com/cdoispontos" target="_blank" class="footer-social-btn facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="https://wa.me/351964395628" target="_blank" class="footer-social-btn whatsapp">
+                <i class="bi bi-whatsapp"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <!-- Coluna 4: Horário + redes sociais -->
-        <div class="col-6 col-md-6 col-lg-3">
+        <!-- Coluna 5: Horário + Redes Sociais no Desktop -->
+        <div class="col-6 col-md-6 col-lg-3 d-none d-md-block">
           <h5 class="footer-title">Horário</h5>
           <ul class="footer-hours list-unstyled mb-3">
             <li>Seg a Sex: 9h30 – 12h30 / 14h00 – 19h00</li>
@@ -77,7 +98,7 @@
             <a href="https://www.facebook.com/cdoispontos" target="_blank" class="footer-social-btn facebook">
               <i class="bi bi-facebook"></i>
             </a>
-            <a href="https://wa.me/351964395628" target="_blank" class="footer-social-btn whatsapp">
+            <a href="https://wa.me/351939982878" target="_blank" class="footer-social-btn whatsapp">
               <i class="bi bi-whatsapp"></i>
             </a>
           </div>
