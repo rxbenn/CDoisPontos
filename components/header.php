@@ -37,13 +37,6 @@
         <li class="nav-item">
           <a class="nav-link" href="index.php#localizacao-contactos">Contactos</a>
         </li>
-        <li class="nav-item ms-lg-2">
-          <a class="btn btn-warning btn-sm px-3 rounded-pill"
-            href="https://wa.me/351939982878"
-            target="_blank">
-            <i class="bi bi-whatsapp me-1"></i> WhatsApp
-          </a>
-        </li>
       </ul>
     </div>
 

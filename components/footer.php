@@ -33,6 +33,7 @@
             <li><a href="index.php" class="footer-link">Início</a></li>
             <li><a href="sobre.php" class="footer-link">Sobre</a></li>
             <li><a href="index.php#localizacao-contactos" class="footer-link">Contactos</a></li>
+            <li><a href="politica-privacidade.php" class="footer-link mt-2 text-white-50 small"><i class="bi bi-shield-lock me-1"></i>Privacidade e RGPD</a></li>
           </ul>
         </div>
 
@@ -116,4 +117,35 @@
         </small>
     </div>
     </div>
+
+    <!-- WHATSAPP FLUTUANTE -->
+    <a href="https://wa.me/351939982878" class="whatsapp-float" target="_blank" aria-label="Falar connosco no WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- BANNER DE COOKIES (RGPD) -->
+    <div id="cookieConsentBanner" class="cookie-banner">
+        <div>
+            <i class="bi bi-info-circle-fill me-2 text-warning fs-6"></i> Utilizamos cookies estritamente essenciais para garantir o funcionamento correto e fluído do site. 
+            <a href="politica-privacidade.php" class="text-white text-decoration-underline ms-1 fw-bold">Ler mais</a>.
+        </div>
+        <button id="btnAcceptCookies" class="btn-cookie shadow-sm">Compreendi</button>
+    </div>
+
+    <!-- SCRIPT DE ACEITAÇÃO LOGADA NO LOCALSTORAGE -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cookieBanner = document.getElementById("cookieConsentBanner");
+            const acceptBtn = document.getElementById("btnAcceptCookies");
+
+            if (!localStorage.getItem("cdoispontos_cookies_accepted")) {
+                cookieBanner.style.display = "flex";
+            }
+
+            acceptBtn.addEventListener("click", function () {
+                localStorage.setItem("cdoispontos_cookies_accepted", "true");
+                cookieBanner.style.display = "none";
+            });
+        });
+    </script>
 </footer>
