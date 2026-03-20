@@ -99,6 +99,90 @@
       </div>
     </div>
   </section>
+
+  <!-- MARCAS PARCEIRAS (CARROSEL) -->
+  <section id="marcas-parceiras" class="brands-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="mb-1">Trabalhamos com as melhores marcas do mercado</h2>
+        <p class="text-muted small mb-0">Parceiros de confiança para lhe garantir os melhores produtos.</p>
+      </div>
+
+      <div class="brands-slider">
+        <div class="brands-track">
+          <!-- Multiplicamos os itens para garantir o efeito de loop infinito suave -->
+          <!-- Pack 1 -->
+          <div class="brand-logo-item">
+            <img src="imagens/apple.png" alt="Marca 1" class="brand-placeholder">
+          </div>
+          <div class="brand-logo-item">
+            <img src="imagens/samsung.png" alt="Marca 2" class="brand-placeholder">
+          </div>
+          <div class="brand-logo-item">
+            <img src="imagens/microsoft.png" alt="Marca 3" class="brand-placeholder">
+          </div>
+          <div class="brand-logo-item">
+            <img src="imagens/intel.png" alt="Marca 4" class="brand-placeholder">
+          </div>
+          <div class="brand-logo-item">
+            <img src="imagens/hp.png" alt="Marca 5" class="brand-placeholder">
+          </div>
+          <div class="brand-logo-item">
+            <img src="imagens/sony.png" alt="Marca 6" class="brand-placeholder">
+          </div>
+          <div class="brand-logo-item">
+            <img src="imagens/lenovo.png" alt="Marca 7" class="brand-placeholder">
+          </div>
+          <div class="brand-logo-item">
+            <img src="imagens/dell.png" alt="Marca 8" class="brand-placeholder">
+          </div>
+          <div class="brand-logo-item">
+            <img src="imagens/asus.png" alt="Marca 9" class="brand-placeholder">
+          </div>
+          <div class="brand-logo-item">
+            <img src="imagens/logitech.png" alt="Marca 10" class="brand-placeholder">
+          </div>
+          
+          <!-- Pack 2 (Cópia para o Loop) -->
+          <div class="brand-logo-item">
+            <img src="imagens/apple.png" alt="Marca 1" class="brand-placeholder">
+          </div>
+          <div class="brand-logo-item">
+            <img src="imagens/samsung.png" alt="Marca 2" class="brand-placeholder">
+          </div>
+          <div class="brand-logo-item">
+            <img src="imagens/microsoft.png" alt="Marca 3" class="brand-placeholder">
+          </div>
+          <div class="brand-logo-item">
+            <img src="imagens/intel.png" alt="Marca 4" class="brand-placeholder">
+          </div>
+          <div class="brand-logo-item">
+            <img src="imagens/hp.png" alt="Marca 5" class="brand-placeholder">
+          </div>
+          <div class="brand-logo-item">
+            <img src="imagens/sony.png" alt="Marca 6" class="brand-placeholder">
+          </div>
+          <div class="brand-logo-item">
+            <img src="imagens/lenovo.png" alt="Marca 7" class="brand-placeholder">
+          </div>
+          <div class="brand-logo-item">
+            <img src="imagens/dell.png" alt="Marca 8" class="brand-placeholder">
+          </div>
+          <div class="brand-logo-item">
+            <img src="imagens/asus.png" alt="Marca 9" class="brand-placeholder">
+          </div>
+          <div class="brand-logo-item">
+            <img src="imagens/logitech.png" alt="Marca 10" class="brand-placeholder">
+          </div>
+        </div>
+      </div>
+      <div class="brands-action">
+        <a href="marcas.php" class="btn btn-brands-more">
+          Ver todas as marcas <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+      </div>
+    </div>
+  </section>
   
  <!-- PRODUTOS EM DESTAQUE (CARDS SIMPLES E MODERNOS) 
   <section id="produtos-destaque">
