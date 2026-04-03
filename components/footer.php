@@ -32,7 +32,8 @@
           <ul class="footer-links list-unstyled mb-0">
             <li><a href="index.php" class="footer-link">Início</a></li>
             <li><a href="sobre.php" class="footer-link">Sobre</a></li>
-            <li><a href="index.php#localizacao-contactos" class="footer-link">Contactos</a></li>
+            <li><a href="parcerias.php" class="footer-link">Parcerias</a></li>
+            <li><a href="contacto.php" class="footer-link">Contacto</a></li>
             <li><a href="politica-privacidade.php" class="footer-link mt-2 text-white-50 small"><i class="bi bi-shield-lock me-1"></i>Privacidade e RGPD</a></li>
           </ul>
         </div>
@@ -79,7 +80,7 @@
               <a href="https://www.facebook.com/cdoispontos" target="_blank" class="footer-social-btn facebook">
                 <i class="bi bi-facebook"></i>
               </a>
-              <a href="https://wa.me/351964395628" target="_blank" class="footer-social-btn whatsapp">
+              <a href="https://wa.me/351939982878" target="_blank" class="footer-social-btn whatsapp">
                 <i class="bi bi-whatsapp"></i>
               </a>
             </div>

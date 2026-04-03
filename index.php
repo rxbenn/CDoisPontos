@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CDoisPontos</title>
+    <title>CDoisPontos — Tecnologia, Reparações e Assistência Técnica na Areosa</title>
+    <meta name="description" content="CDoisPontos — loja de tecnologia e assistência técnica na Praia da Amorosa, Viana do Castelo. Reparamos telemóveis, computadores e outros equipamentos. Visita-nos!">
 
     <!-- CSS do Bootstrap + o teu CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -28,7 +29,7 @@
             Tudo o que procuras, <span class="brand-accent">encontras!</span>
           </h1>
           <p class="hero-subtitle mb-4 mx-auto mx-lg-0" style="max-width: 500px;">
-            Localizada na <strong>Areosa</strong>, a CDoisPontos é uma loja de tecnologia e informática com <strong>reparação de equipamentos</strong>, venda de
+            Localizada na <strong>Amorosa</strong>, a CDoisPontos é uma loja de tecnologia e informática com <strong>reparação de equipamentos</strong>, venda de
             <strong>acessórios</strong> e <strong>assistência técnica</strong> personalizada.
           </p>
           <div class="hero-actions mt-4 d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
@@ -55,9 +56,24 @@
   <!-- SERVIÇOS PRINCIPAIS -->
   <section id="servicos">
     <div class="container">
-      <div class="text-center mb-4">
-        <h2 class="mb-1">Serviços da CDoisPontos</h2>
+      <div class="position-relative text-center mb-4 pb-2 pb-md-0">
+        <span class="section-eyebrow">O que fazemos</span>
+        <h2 class="section-heading centered d-block mb-1">Serviços da CDoisPontos</h2>
         <p class="text-muted small mb-0">Três áreas principais onde podemos ajudar-te</p>
+        
+        <!-- Botão perfeitamente encostado à extrema direita (Apenas em desktop/tablets) -->
+        <div class="position-absolute top-50 end-0 translate-middle-y d-none d-md-block">
+          <a href="sobre.php#servicos" class="btn btn-outline-secondary btn-sm rounded-pill px-4 shadow-sm animate-soft">
+            Ver todos os serviços <i class="bi bi-arrow-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Em telemóveis fica centrado abaixo do título em prol da legibilidade do ecrã estreito -->
+      <div class="text-center mb-4 d-block d-md-none">
+        <a href="sobre.php#servicos" class="btn btn-outline-secondary btn-sm rounded-pill px-4 shadow-sm animate-soft">
+          Ver todos os serviços <i class="bi bi-arrow-right ms-1"></i>
+        </a>
       </div>
 
       <div class="row g-4">
@@ -104,7 +120,8 @@
   <section id="marcas-parceiras" class="brands-section">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 class="mb-1">Trabalhamos com as melhores marcas do mercado</h2>
+        <span class="section-eyebrow">Parceiros oficiais</span>
+        <h2 class="section-heading centered d-block mb-1">Trabalhamos com as melhores marcas</h2>
         <p class="text-muted small mb-0">Parceiros de confiança para lhe garantir os melhores produtos.</p>
       </div>
 
@@ -190,9 +207,10 @@
     <div class="row g-4">
       <div class="col-lg-10 mx-auto">
         <div class="info-card h-100">
-          <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+      <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
             <div>
-              <h3 class="mb-1">Localização e Contactos</h3>
+              <span class="section-eyebrow">Onde estamos</span>
+              <h3 class="mb-0">Localização e Contactos</h3>
               <p class="text-muted mb-0 small">Fala connosco ou visita a nossa loja física</p>
             </div>
           </div>

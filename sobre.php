@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre - CDoisPontos</title>
+  <meta name="description" content="Saiba mais sobre a CDoisPontos — mais de 20 anos de experiência em tecnologia, reparações e assistência técnica na Praia da Amorosa, Viana do Castelo.">
 
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -29,11 +30,12 @@
 
         <div class="row align-items-center g-4">
           <div class="col-lg-7">
+            <span class="section-eyebrow">Desde 2003 na Areosa</span>
             <h1 class="sobre-hero-title">
               Sobre a <span class="brand-accent">CDoisPontos</span>
             </h1>
             <p class="sobre-hero-text mb-3">
-              Desde 2003 na Praia da Amorosa, somos uma loja de tecnologia, reparação e muito mais.
+              Loja de tecnologia, reparações e muito mais na Praia da Amorosa.
               O nosso objetivo é ser a solução certa, seja qual for a tua necessidade.
             </p>
             <div class="sobre-hero-pills">
@@ -68,17 +70,17 @@
         <div class="row g-4 align-items-stretch">
           <div class="col-lg-7 animate-soft">
             <article class="info-card sobre-card h-100">
+              <span class="section-eyebrow">A nossa missão</span>
               <h2 class="mb-3">Quem somos</h2>
               <p class="mb-3">
-                Fundada em 2003, a CDoisPontos é uma loja de tecnologia, lazer e muito mais!
-                A nossa visão assenta em sermos a solução para os nossos clientes independentemente das suas necessidades.
+                Fundada em 2003, a CDoisPontos é uma loja de tecnologia, lazer e muito mais.
+                A nossa visão assenta em sermos a solução para os nossos clientes, independentemente das suas necessidades.
                 <strong>Tudo o que procuras, encontras!</strong>
               </p>
               <p class="mb-0">
-                Desde mobilidade elétrica, telemóveis, acessórios, tablets, bicicletas, eletrodomésticos, piscinas, jardim,
-                diversão, gadgets, TVs, recondicionados, espaço kids, ferramentas e muito mais, até à reparação de
-                equipamentos eletrónicos e informáticos (mobile, informática, indústria, multimédia, gaming, áudio,
-                veículos elétricos, eletrodomésticos e outros), estamos focados em dar-te respostas rápidas e de confiança.
+                Do equipamento informático aos eletrodomésticos, passando por mobilidade elétrica,
+                tablets, gadgets, TVs, artigos de jardim e muito mais — até à reparação de equipamentos
+                eletrónicos e informáticos com diagnóstico claro e acompanhamento personalizado.
               </p>
             </article>
           </div>
@@ -100,12 +102,13 @@
         </div>
       </div>
     </section>
-x
+    
     <!-- SERVIÇOS DETALHADOS -->
     <section id="servicos" class="sobre-section sobre-areas">
       <div class="container">
         <div class="text-center mb-4">
-          <h2 class="mb-1">Serviços da CDoisPontos</h2>
+          <span class="section-eyebrow">O que oferecemos</span>
+          <h2 class="section-heading centered d-block mb-1">Serviços da CDoisPontos</h2>
           <p class="text-muted small mb-0">
             Uma visão mais completa das áreas em que podemos ajudar-te
           </p>
@@ -192,6 +195,7 @@ x
       <div class="container">
         <div class="row g-4 align-items-center">
           <div class="col-lg-5">
+            <span class="section-eyebrow">A nossa trajetória</span>
             <h2 class="mb-3">A nossa história</h2>
             <p class="text-muted mb-0">
               Crescemos lado a lado com quem nos visita, adaptando a loja e os serviços às necessidades

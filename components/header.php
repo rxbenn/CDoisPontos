@@ -35,6 +35,10 @@
               href="sobre.php">Sobre</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link <?php echo (basename($_SERVER['PHP_SELF'])==='parcerias.php') ? 'active' : ''; ?>"
+              href="parcerias.php">Parcerias</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="index.php#localizacao-contactos">Contactos</a>
         </li>
       </ul>

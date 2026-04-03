@@ -40,6 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto - CDoisPontos</title>
+  <meta name="description" content="Contacta a CDoisPontos em Viana do Castelo. Envia-nos uma mensagem ou fala connosco pelo WhatsApp para reparações, suporte técnico ou qualquer dúvida.">
 
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
