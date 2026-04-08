@@ -55,8 +55,8 @@
                 <i class="bi bi-headphones sobre-hero-icon"></i>
               </div>
               <div class="sobre-hero-center">
-                <span class="sobre-hero-center-title">CDoisPontos</span>
-                <span class="sobre-hero-center-sub">Reparação · Manutenção · Tecnologia</span>
+                <span class="sobre-hero-center-title">C<span class="brand-accent">Dois</span>Pontos</span>
+                <span class="sobre-hero-center-sub">Reparação Manutenção Tecnologia</span>
               </div>
             </div>
           </div>
@@ -69,7 +69,7 @@
       <div class="container">
         <div class="row g-4 align-items-stretch">
           <div class="col-lg-7 animate-soft">
-            <article class="info-card sobre-card h-100">
+            <article class="info-card h-100">
               <span class="section-eyebrow">A nossa missão</span>
               <h2 class="mb-3">Quem somos</h2>
               <p class="mb-3">
@@ -78,7 +78,7 @@
                 <strong>Tudo o que procuras, encontras!</strong>
               </p>
               <p class="mb-0">
-                Do equipamento informático aos eletrodomésticos, passando por mobilidade elétrica,
+                De equipamentos informáticos aos eletrodomésticos, passando por mobilidade elétrica,
                 tablets, gadgets, TVs, artigos de jardim e muito mais — até à reparação de equipamentos
                 eletrónicos e informáticos com diagnóstico claro e acompanhamento personalizado.
               </p>
@@ -86,15 +86,15 @@
           </div>
 
           <div class="col-lg-5 animate-soft">
-            <aside class="info-card sobre-card h-100">
+            <aside class="info-card h-100">
               <h3 class="mb-3">O que nos define</h3>
-              <ul class="list-unstyled mb-3 small sobre-list">
-                <li><i class="bi bi-check-circle-fill me-2 text-success"></i> +20 anos de experiência na área.</li>
-                <li><i class="bi bi-check-circle-fill me-2 text-success"></i> Explicamos o problema e as opções antes de avançar.</li>
-                <li><i class="bi bi-check-circle-fill me-2 text-success"></i> Portefólio amplo: tecnologia, lazer e serviços.</li>
-                <li><i class="bi bi-check-circle-fill me-2 text-success"></i> Reparações com transparência e acompanhamento.</li>
+              <ul class="list-unstyled mb-4 small sobre-list">
+                <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill me-2 text-success fs-5"></i> +20 anos de experiência na área.</li>
+                <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill me-2 text-success fs-5"></i> Diagnóstico e opções claras.</li>
+                <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill me-2 text-success fs-5"></i> Portefólio amplo de lazer e TI.</li>
+                <li class="mb-0 d-flex align-items-center"><i class="bi bi-check-circle-fill me-2 text-success fs-5"></i> Transparência nas reparações.</li>
               </ul>
-              <a href="index.php#localizacao-contactos" class="btn btn-outline-primary btn-sm rounded-pill">
+              <a href="index.php#localizacao-contactos" class="btn btn-outline-primary btn-sm rounded-pill px-4">
                 <i class="bi bi-geo-alt-fill me-1"></i> Ver localização e contactos
               </a>
             </aside>
@@ -115,8 +115,8 @@
         </div>
 
         <div class="row g-4">
-          <div class="col-md-4">
-            <div class="highlight-card sobre-highlight h-100">
+          <div class="col-md-4 animate-soft">
+            <div class="highlight-card h-100">
               <div class="highlight-icon-wrap">
                 <i class="bi bi-phone highlight-icon"></i>
               </div>
@@ -127,8 +127,8 @@
             </div>
           </div>
 
-          <div class="col-md-4">
-            <div class="highlight-card sobre-highlight h-100">
+          <div class="col-md-4 animate-soft">
+            <div class="highlight-card h-100">
               <div class="highlight-icon-wrap">
                 <i class="bi bi-laptop highlight-icon"></i>
               </div>
@@ -139,8 +139,8 @@
             </div>
           </div>
 
-          <div class="col-md-4">
-            <div class="highlight-card sobre-highlight h-100">
+          <div class="col-md-4 animate-soft">
+            <div class="highlight-card h-100">
               <div class="highlight-icon-wrap">
                 <i class="bi bi-headset highlight-icon"></i>
               </div>
@@ -151,8 +151,8 @@
             </div>
           </div>
 
-          <div class="col-md-4">
-            <div class="highlight-card sobre-highlight h-100">
+          <div class="col-md-4 animate-soft">
+            <div class="highlight-card h-100">
               <div class="highlight-icon-wrap">
                 <i class="bi bi-usb-symbol highlight-icon"></i>
               </div>
@@ -163,8 +163,8 @@
             </div>
           </div>
 
-          <div class="col-md-4">
-            <div class="highlight-card sobre-highlight h-100">
+          <div class="col-md-4 animate-soft">
+            <div class="highlight-card h-100">
               <div class="highlight-icon-wrap">
                 <i class="bi bi-pc-display-horizontal highlight-icon"></i>
               </div>
@@ -175,8 +175,8 @@
             </div>
           </div>
 
-          <div class="col-md-4">
-            <div class="highlight-card sobre-highlight h-100">
+          <div class="col-md-4 animate-soft">
+            <div class="highlight-card h-100">
               <div class="highlight-icon-wrap">
                 <i class="bi bi-lightning-charge highlight-icon"></i>
               </div>

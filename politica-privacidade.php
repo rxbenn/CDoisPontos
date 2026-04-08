@@ -45,7 +45,7 @@ $mensagemStatus = '';
       <div class="container">
         <div class="row">
           <div class="col-lg-10 mx-auto">
-            <div class="info-card p-4 p-md-5 border-0 shadow-lg" style="border-radius: 28px;">
+            <div class="info-card">
               
               <h3 class="h4 fw-bold mb-4"><i class="bi bi-shield-check text-success me-2"></i>1. Política de Privacidade (RGPD)</h3>
               <p class="text-muted small mb-5">

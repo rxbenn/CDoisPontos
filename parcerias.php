@@ -252,7 +252,7 @@
                     </div>
                     <!-- Intel -->
                     <div class="brand-logo-item brand-main">
-                        <img src="imagens/intel.png" alt="Intel" class="brand-placeholder">
+                        <img src="imagens/intel.png" alt="Intel" class="brand-placeholder scale-up-2">
                     </div>
                     <!-- i-tec -->
                     <div class="brand-logo-item">
@@ -296,7 +296,7 @@
                     </div>
                     <!-- Lenovo -->
                     <div class="brand-logo-item brand-main">
-                        <img src="imagens/lenovo.png" alt="Lenovo" class="brand-placeholder">
+                        <img src="imagens/lenovo.png" alt="Lenovo" class="brand-placeholder scale-up-2">
                     </div>
                     <!-- Letsignit -->
                     <div class="brand-logo-item">
@@ -340,7 +340,7 @@
                     </div>
                     <!-- Microsoft -->
                     <div class="brand-logo-item brand-main">
-                        <img src="imagens/microsoft.png" alt="Microsoft" class="brand-placeholder">
+                        <img src="imagens/microsoft.png" alt="Microsoft" class="brand-placeholder scale-up-3">
                     </div>
                     <!-- Minix -->
                     <div class="brand-logo-item">
@@ -436,7 +436,7 @@
                     </div>
                     <!-- Samsung -->
                     <div class="brand-logo-item brand-main">
-                        <img src="imagens/samsung.png" alt="Samsung" class="brand-placeholder">
+                        <img src="imagens/samsung.png" alt="Samsung" class="brand-placeholder scale-up-3">
                     </div>
                     <!-- SanDisk -->
                     <div class="brand-logo-item">
@@ -613,22 +613,22 @@
         </section>
 
         <!-- CTA FINAL: CONTACTO -->
-        <section style="background: linear-gradient(135deg, #061827 0%, #0d3b5c 100%); padding: 60px 0;">
+        <section class="sobre-section parcerias-cta">
             <div class="container">
                 <div class="row align-items-center g-4">
                     <div class="col-lg-7">
-                        <span class="section-eyebrow" style="color:rgba(245,124,0,0.9);">Precisas de ajuda?</span>
-                        <h2 class="mt-1 mb-2" style="color:#ffffff; font-size:1.65rem; font-weight:800;">Fala connosco sobre qualquer marca</h2>
-                        <p class="mb-0" style="color:rgba(255,255,255,0.72); max-width:480px; font-size:0.95rem;">
+                        <span class="section-eyebrow">Precisas de ajuda?</span>
+                        <h2 class="mt-1 mb-2">Fala connosco sobre qualquer marca</h2>
+                        <p class="mb-0">
                             Tens dúvidas sobre alguma das nossas marcas parceiras, serviços ou precisas de aconselhamento técnico? Estamos disponíveis para ajudar.
                         </p>
                     </div>
                     <div class="col-lg-5 d-flex flex-wrap gap-3 justify-content-lg-end">
-                        <a href="contacto.php" class="btn btn-warning px-4 py-2 fw-bold rounded-pill shadow">
-                            <i class="bi bi-envelope-fill me-2"></i>Enviar mensagem
+                        <a href="contacto.php" class="btn-hero-main">
+                            <i class="bi bi-send-fill"></i> Enviar mensagem
                         </a>
-                        <a href="https://wa.me/351939982878" target="_blank" class="btn btn-outline-light px-4 py-2 fw-semibold rounded-pill">
-                            <i class="bi bi-whatsapp me-2"></i>WhatsApp
+                        <a href="https://wa.me/351939982878" target="_blank" class="btn-hero-secondary">
+                            <i class="bi bi-whatsapp"></i> WhatsApp
                         </a>
                     </div>
                 </div>

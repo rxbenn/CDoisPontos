@@ -1,5 +1,5 @@
 <footer class="site-footer">
-  <div class="footer-main py-5">
+  <div class="footer-main py-4">
     <div class="container">
       <div class="row g-4 align-items-start">
 
@@ -71,6 +71,12 @@
                 Fale connosco no WhatsApp
               </a>
             </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-chat-text-fill me-2"></i>
+              <a href="contacto.php" class="footer-link">
+                Enviar Mensagem Direta
+              </a>
+            </li>
           </ul>
           
           <!-- Segue-nos visível logo abaixo dos contactos no Mobile -->
@@ -126,11 +132,14 @@
 
     <!-- BANNER DE COOKIES (RGPD) -->
     <div id="cookieConsentBanner" class="cookie-banner">
-        <div>
-            <i class="bi bi-info-circle-fill me-2 text-warning fs-6"></i> Utilizamos cookies estritamente essenciais para garantir o funcionamento correto e fluído do site. 
-            <a href="politica-privacidade.php" class="text-white text-decoration-underline ms-1 fw-bold">Ler mais</a>.
+        <div class="cookie-content">
+            <i class="bi bi-info-circle-fill text-warning me-2"></i>
+            <span>Utilizamos cookies estritamente essenciais para garantir o funcionamento correto e fluído do site. <span style="white-space: nowrap;"><a href="politica-privacidade.php" class="text-white text-decoration-underline ms-1 fw-bold">Saber mais</a></span></span>
         </div>
-        <button id="btnAcceptCookies" class="btn-cookie shadow-sm">Compreendi</button>
+        <div class="cookie-actions">
+            <button id="btnRejectCookies" class="btn-cookie-outline">Rejeitar</button>
+            <button id="btnAcceptCookies" class="btn-cookie">Aceitar</button>
+        </div>
     </div>
 
     <!-- SCRIPT DE ACEITAÇÃO LOGADA NO LOCALSTORAGE -->
@@ -138,15 +147,95 @@
         document.addEventListener("DOMContentLoaded", function () {
             const cookieBanner = document.getElementById("cookieConsentBanner");
             const acceptBtn = document.getElementById("btnAcceptCookies");
+            const rejectBtn = document.getElementById("btnRejectCookies");
+            const whatsappBtn = document.querySelector(".whatsapp-float");
+            const siteHeader = document.querySelector(".site-header");
 
             if (!localStorage.getItem("cdoispontos_cookies_accepted")) {
                 cookieBanner.style.display = "flex";
+                // Move o WhatsApp para cima se o banner estiver visível
+                if (whatsappBtn) {
+                    if (window.innerWidth < 991) {
+                        whatsappBtn.style.bottom = "120px"; // Ajustado de 190px conforme pedido
+                    } else {
+                        whatsappBtn.style.bottom = "75px"; 
+                    }
+                }
             }
 
-            acceptBtn.addEventListener("click", function () {
+            const handleConsent = () => {
                 localStorage.setItem("cdoispontos_cookies_accepted", "true");
                 cookieBanner.style.display = "none";
-            });
+                // Repõe o WhatsApp na posição original
+                if (whatsappBtn) {
+                    whatsappBtn.style.bottom = "25px";
+                }
+            };
+
+            if(acceptBtn) acceptBtn.addEventListener("click", handleConsent);
+            if(rejectBtn) rejectBtn.addEventListener("click", handleConsent);
+
+            // Header premium ao scroll
+            const syncHeaderState = () => {
+                if (!siteHeader) return;
+                siteHeader.classList.toggle("is-scrolled", window.scrollY > 8);
+            };
+            syncHeaderState();
+            window.addEventListener("scroll", syncHeaderState, { passive: true });
+
+            // Reveal-on-scroll discreto para secções e cartões
+            const revealTargets = document.querySelectorAll(
+                "section, .sobre-timeline-item, .marcas-grid .brand-logo-item"
+            );
+            if (revealTargets.length) {
+                // Mostra logo no carregamento os elementos já na viewport;
+                // os restantes ficam para animação ao scroll.
+                revealTargets.forEach((el) => {
+                    const rect = el.getBoundingClientRect();
+                    const isInInitialView = rect.top < window.innerHeight * 1.05;
+                    el.classList.add("reveal-on-scroll");
+                    if (el.matches("section")) {
+                        el.classList.add("reveal-strong");
+                    } else {
+                        el.classList.add("reveal-soft");
+                    }
+
+                    // Stagger discreto por grupo visual (efeito em cascata)
+                    const siblings = el.parentElement ? Array.from(el.parentElement.children) : [];
+                    const siblingIndex = Math.max(0, siblings.indexOf(el));
+                    let stagger = (siblingIndex % 6) * 45;
+                    if (el.matches(".parcerias-cta")) {
+                        stagger = 0; // aparece sem atraso perceptível
+                    }
+                    el.style.setProperty("--reveal-delay", `${stagger}ms`);
+
+                    if (isInInitialView) {
+                        el.classList.add("is-visible");
+                    }
+                });
+
+                if ("IntersectionObserver" in window) {
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add("is-visible");
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, {
+                        threshold: 0.12,
+                        rootMargin: "0px 0px -6% 0px"
+                    });
+
+                    revealTargets.forEach((el) => {
+                        if (!el.classList.contains("is-visible")) {
+                            observer.observe(el);
+                        }
+                    });
+                } else {
+                    revealTargets.forEach((el) => el.classList.add("is-visible"));
+                }
+            }
         });
     </script>
 </footer>

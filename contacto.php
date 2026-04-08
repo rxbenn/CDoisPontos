@@ -79,12 +79,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           
           <!-- LADO ESQUERDO: INFOS DE CONFIANÇA -->
           <div class="col-lg-4 d-none d-lg-block">
-             <div class="info-card h-100 p-4 p-md-5 border-0 shadow-lg" style="border-radius: 28px;">
+             <div class="info-card h-100">
                 <h4 class="fw-bold mb-4">Apoio ao Cliente</h4>
                 
                 <div class="d-flex align-items-center mb-4 gap-3">
-                  <div class="contact-icon bg-primary-subtle text-primary rounded-circle" style="width: 50px; height: 50px; flex: 0 0 auto; display: flex; align-items: center; justify-content: center;">
-                    <i class="bi bi-lightning-charge-fill fs-4"></i>
+                  <div class="contact-icon-premium icon-blue">
+                    <i class="bi bi-lightning-charge-fill"></i>
                   </div>
                   <div>
                     <div class="fw-bold small">Resposta em <br> menos de 24h</div>
@@ -93,8 +93,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
 
                 <div class="d-flex align-items-center mb-4 gap-3">
-                  <div class="contact-icon bg-warning-subtle text-warning rounded-circle" style="width: 50px; height: 50px; flex: 0 0 auto; display: flex; align-items: center; justify-content: center;">
-                    <i class="bi bi-shield-lock-fill fs-4"></i>
+                  <div class="contact-icon-premium icon-orange">
+                    <i class="bi bi-shield-lock-fill"></i>
                   </div>
                   <div>
                     <div class="fw-bold small">Privacidade <br> Garantida</div>
@@ -103,8 +103,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
 
                 <div class="d-flex align-items-center gap-3">
-                  <div class="contact-icon bg-success-subtle text-success rounded-circle" style="width: 50px; height: 50px; flex: 0 0 auto; display: flex; align-items: center; justify-content: center;">
-                    <i class="bi bi-headset fs-4"></i>
+                  <div class="contact-icon-premium icon-green">
+                    <i class="bi bi-headset"></i>
                   </div>
                   <div>
                     <div class="fw-bold small">Suporte <br> Especializado</div>
@@ -122,38 +122,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
           <!-- LADO DIREITO: O FORMULÁRIO (CLEAN) -->
           <div class="col-lg-8 animate-soft">
-            <div class="info-card h-100 p-4 p-md-5 border-0 shadow-lg" style="border-radius: 28px;">
+            <div class="info-card h-100">
                 <h2 class="h4 fw-bold mb-4">Envia-nos uma mensagem</h2>
               <?php echo $mensagemStatus; ?>
 
-              <form method="POST" action="contacto.php" class="row g-4">
+              <form method="POST" action="contacto.php" class="form-modern row g-4">
                 <div class="col-md-6">
-                  <label class="form-label fw-bold small text-muted mb-1 ml-1">Nome Completo</label>
-                  <input type="text" name="nome" class="form-control form-control-lg bg-light border-0 px-4 fs-6 rounded-4" placeholder="Ex: João Silva" required>
+                  <label class="form-label">Nome Completo</label>
+                  <input type="text" name="nome" class="form-control" placeholder="Ex: João Silva" required>
                 </div>
 
                 <div class="col-md-6">
-                  <label class="form-label fw-bold small text-muted mb-1 ml-1">Email</label>
-                  <input type="email" name="email" class="form-control form-control-lg bg-light border-0 px-4 fs-6 rounded-4" placeholder="Ex: joao@email.com" required>
+                  <label class="form-label">Email</label>
+                  <input type="email" name="email" class="form-control" placeholder="Ex: joao@email.com" required>
                 </div>
                 
                 <div class="col-md-6">
-                  <label class="form-label fw-bold small text-muted mb-1 ml-1">Telemóvel (Opcional)</label>
-                  <input type="tel" name="telefone" class="form-control form-control-lg bg-light border-0 px-4 fs-6 rounded-4" placeholder="Ex: +351 912 345 678">
+                  <label class="form-label">Telemóvel (Opcional)</label>
+                  <input type="tel" name="telefone" class="form-control" placeholder="Ex: +351 912 345 678">
                 </div>
 
                 <div class="col-md-6">
-                  <label class="form-label fw-bold small text-muted mb-1 ml-1">Assunto</label>
-                  <input type="text" name="assunto" class="form-control form-control-lg bg-light border-0 px-4 fs-6 rounded-4" placeholder="Ex: Reparação de Portátil" required>
+                  <label class="form-label">Assunto</label>
+                  <input type="text" name="assunto" class="form-control" placeholder="Ex: Reparação de Portátil" required>
                 </div>
 
                 <div class="col-12">
-                  <label class="form-label fw-bold small text-muted mb-1 ml-1">Mensagem</label>
-                  <textarea name="mensagem" class="form-control bg-light border-0 px-4 fs-6" style="border-radius: 20px;" rows="6" placeholder="Explica-nos detalhadamente o que precisas..." required></textarea>
+                  <label class="form-label">Mensagem</label>
+                  <textarea name="mensagem" class="form-control" rows="6" placeholder="Explica-nos detalhadamente o que precisas..." required></textarea>
                 </div>
 
                 <div class="col-12 mt-4">
-                  <button type="submit" class="btn btn-warning btn-lg rounded-pill px-5 py-3 w-100 fw-bold shadow-sm border-0 d-flex align-items-center justify-content-center gap-2">
+                  <button type="submit" class="btn-hero-main w-100 py-3">
                     <i class="bi bi-send-fill text-white"></i>
                     <span class="text-white">Enviar Mensagem</span>
                   </button>

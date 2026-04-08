@@ -33,11 +33,11 @@
             <strong>acessórios</strong> e <strong>assistência técnica</strong> personalizada.
           </p>
           <div class="hero-actions mt-4 d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
-            <a href="sobre.php#servicos" class="btn btn-light px-4 py-2 fw-semibold">
-              <i class="bi bi-tools me-1"></i> Ver serviços
+            <a href="#localizacao-contactos" class="btn-hero-main animate-soft">
+              <i class="bi bi-telephone-outbound"></i> Contactar
             </a>
-            <a href="#localizacao-contactos" class="btn btn-outline-light px-4 py-2 fw-semibold">
-              <i class="bi bi-telephone-outbound me-1"></i> Contactar
+            <a href="sobre.php#servicos" class="btn-hero-secondary animate-soft">
+              <i class="bi bi-tools"></i> Ver serviços
             </a>
           </div>
         </div>
@@ -133,13 +133,13 @@
             <img src="imagens/apple.png" alt="Marca 1" class="brand-placeholder">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/samsung.png" alt="Marca 2" class="brand-placeholder">
+            <img src="imagens/samsung.png" alt="Marca 2" class="brand-placeholder scale-up-3">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/microsoft.png" alt="Marca 3" class="brand-placeholder">
+            <img src="imagens/microsoft.png" alt="Marca 3" class="brand-placeholder scale-up-3">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/intel.png" alt="Marca 4" class="brand-placeholder">
+            <img src="imagens/intel.png" alt="Marca 4" class="brand-placeholder scale-up-2">
           </div>
           <div class="brand-logo-item">
             <img src="imagens/hp.png" alt="Marca 5" class="brand-placeholder">
@@ -148,7 +148,7 @@
             <img src="imagens/sony.png" alt="Marca 6" class="brand-placeholder">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/lenovo.png" alt="Marca 7" class="brand-placeholder">
+            <img src="imagens/lenovo.png" alt="Marca 7" class="brand-placeholder scale-up-2">
           </div>
           <div class="brand-logo-item">
             <img src="imagens/dell.png" alt="Marca 8" class="brand-placeholder">
@@ -165,13 +165,13 @@
             <img src="imagens/apple.png" alt="Marca 1" class="brand-placeholder">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/samsung.png" alt="Marca 2" class="brand-placeholder">
+            <img src="imagens/samsung.png" alt="Marca 2" class="brand-placeholder scale-up-3">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/microsoft.png" alt="Marca 3" class="brand-placeholder">
+            <img src="imagens/microsoft.png" alt="Marca 3" class="brand-placeholder scale-up-3">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/intel.png" alt="Marca 4" class="brand-placeholder">
+            <img src="imagens/intel.png" alt="Marca 4" class="brand-placeholder scale-up-2">
           </div>
           <div class="brand-logo-item">
             <img src="imagens/hp.png" alt="Marca 5" class="brand-placeholder">
@@ -180,7 +180,7 @@
             <img src="imagens/sony.png" alt="Marca 6" class="brand-placeholder">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/lenovo.png" alt="Marca 7" class="brand-placeholder">
+            <img src="imagens/lenovo.png" alt="Marca 7" class="brand-placeholder scale-up-2">
           </div>
           <div class="brand-logo-item">
             <img src="imagens/dell.png" alt="Marca 8" class="brand-placeholder">
@@ -297,7 +297,7 @@
                 <div class="contact-content">
                   <div class="contact-label">Mensagens</div>
                   <div class="contact-value">
-                    <a href="contacto.php" class="btn btn-warning rounded-pill btn-sm px-4 fw-bold shadow-sm border-0 mt-1">
+                    <a href="contacto.php" class="btn-contact-main mt-1">
                       Enviar Mensagem Direta
                     </a>
                   </div>
@@ -319,7 +319,7 @@
             </div>
 
             <!-- Coluna direita: mapa mais clean e integrado -->
-            <div class="col-lg-7">
+            <div class="col-lg-7 d-flex flex-column">
               <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
                 <div>
                   <span class="map-card-label">Localização</span>
