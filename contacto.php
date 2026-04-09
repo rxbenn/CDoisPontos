@@ -1,5 +1,10 @@
 <?php
 $mensagemStatus = '';
+$nome = '';
+$email = '';
+$telefone = '';
+$assunto = '';
+$mensagem = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = strip_tags(trim($_POST["nome"] ?? ''));
@@ -7,6 +12,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telefone = strip_tags(trim($_POST["telefone"] ?? ''));
     $assunto = strip_tags(trim($_POST["assunto"] ?? ''));
     $mensagem = trim($_POST["mensagem"] ?? '');
+
+    // Evitar quebra de headers de email em campos vindos do formulário.
+    $nomeSafeHeader = str_replace(["\r", "\n"], '', $nome);
+    $emailSafeHeader = str_replace(["\r", "\n"], '', (string)$email);
 
     if (empty($nome) || empty($assunto) || empty($mensagem) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $mensagemStatus = '<div class="alert alert-danger py-2 small mb-3">Por favor, preenche todos os campos obrigatórios e verifica o teu email.</div>';
@@ -23,8 +32,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $conteudo .= "-----------------------------------\n\n";
         $conteudo .= "Mensagem:\n$mensagem\n";
 
-        $headers = "From: $nome <$email>\r\n";
-        $headers .= "Reply-To: $email\r\n";
+        $headers = "From: $nomeSafeHeader <$emailSafeHeader>\r\n";
+        $headers .= "Reply-To: $emailSafeHeader\r\n";
+        $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
         if (mail($destinatario, $assunto_email, $conteudo, $headers)) {
             $mensagemStatus = '<div class="alert alert-success py-2 small mb-3">Mensagem enviada com sucesso! Entraremos em contacto brevemente.</div>';
@@ -126,30 +136,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <h2 class="h4 fw-bold mb-4">Envia-nos uma mensagem</h2>
               <?php echo $mensagemStatus; ?>
 
-              <form method="POST" action="contacto.php" class="form-modern row g-4">
+              <form method="POST" action="contacto.php" class="form-modern row g-4" autocomplete="on">
                 <div class="col-md-6">
-                  <label class="form-label">Nome Completo</label>
-                  <input type="text" name="nome" class="form-control" placeholder="Ex: João Silva" required>
+                  <label class="form-label" for="contacto-nome">Nome Completo</label>
+                  <input id="contacto-nome" type="text" name="nome" class="form-control" placeholder="Ex: João Silva" autocomplete="name" value="<?php echo htmlspecialchars($nome, ENT_QUOTES, 'UTF-8'); ?>" required>
                 </div>
 
                 <div class="col-md-6">
-                  <label class="form-label">Email</label>
-                  <input type="email" name="email" class="form-control" placeholder="Ex: joao@email.com" required>
+                  <label class="form-label" for="contacto-email">Email</label>
+                  <input id="contacto-email" type="email" name="email" class="form-control" placeholder="Ex: joao@email.com" autocomplete="email" value="<?php echo htmlspecialchars($email, ENT_QUOTES, 'UTF-8'); ?>" required>
                 </div>
                 
                 <div class="col-md-6">
-                  <label class="form-label">Telemóvel (Opcional)</label>
-                  <input type="tel" name="telefone" class="form-control" placeholder="Ex: +351 912 345 678">
+                  <label class="form-label" for="contacto-telefone">Telemóvel (Opcional)</label>
+                  <input id="contacto-telefone" type="tel" name="telefone" class="form-control" placeholder="Ex: +351 912 345 678" autocomplete="tel" value="<?php echo htmlspecialchars($telefone, ENT_QUOTES, 'UTF-8'); ?>">
                 </div>
 
                 <div class="col-md-6">
-                  <label class="form-label">Assunto</label>
-                  <input type="text" name="assunto" class="form-control" placeholder="Ex: Reparação de Portátil" required>
+                  <label class="form-label" for="contacto-assunto">Assunto</label>
+                  <input id="contacto-assunto" type="text" name="assunto" class="form-control" placeholder="Ex: Reparação de Portátil" autocomplete="on" value="<?php echo htmlspecialchars($assunto, ENT_QUOTES, 'UTF-8'); ?>" required>
                 </div>
 
                 <div class="col-12">
-                  <label class="form-label">Mensagem</label>
-                  <textarea name="mensagem" class="form-control" rows="6" placeholder="Explica-nos detalhadamente o que precisas..." required></textarea>
+                  <label class="form-label" for="contacto-mensagem">Mensagem</label>
+                  <textarea id="contacto-mensagem" name="mensagem" class="form-control" rows="6" placeholder="Explica-nos detalhadamente o que precisas..." autocomplete="off" required><?php echo htmlspecialchars($mensagem, ENT_QUOTES, 'UTF-8'); ?></textarea>
                 </div>
 
                 <div class="col-12 mt-4">

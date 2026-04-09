@@ -267,7 +267,7 @@
                 <div class="contact-content">
                   <div class="contact-label">WhatsApp</div>
                   <div class="contact-value">
-                    <a href="https://wa.me/351939982878" target="_blank" class="contact-link">
+                    <a href="https://wa.me/351939982878" target="_blank" rel="noopener noreferrer" class="contact-link">
                       Fale connosco agora
                     </a>
                   </div>
@@ -282,7 +282,7 @@
                 <div class="contact-content">
                   <div class="contact-label">Facebook</div>
                   <div class="contact-value">
-                    <a href="https://www.facebook.com/cdoispontos" target="_blank" class="contact-link">
+                    <a href="https://www.facebook.com/cdoispontos" target="_blank" rel="noopener noreferrer" class="contact-link">
                       Visite a nossa página
                     </a>
                   </div>
@@ -327,6 +327,7 @@
                 </div>
                 <a href="https://maps.app.goo.gl/aBskyvcViqyXxpft8"
                    target="_blank"
+                   rel="noopener noreferrer"
                    class="map-card-link">
                   <i class="bi bi-arrow-up-right me-1"></i>
                   Abrir no Google Maps

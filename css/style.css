@@ -333,7 +333,7 @@ button:focus-visible,
 }
 
 .btn-hero-main:hover {
-  transform: translateY(-4px) scale(1.04);
+  transform: translateY(-2px) !important;
   box-shadow: 0 15px 35px rgba(245, 124, 0, 0.5);
   filter: brightness(1.1);
 }
@@ -358,8 +358,8 @@ button:focus-visible,
 .btn-hero-secondary:hover {
   background: rgba(255, 255, 255, 0.22);
   border-color: rgba(255, 255, 255, 0.7); /* Borda brilha no hover */
-  transform: translateY(-2px);
-  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1); /* Glow subtil branco */
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 26px rgba(8, 30, 48, 0.28);
 }
 
 /* Cartão da imagem no hero – centrado e com forma fixa */
@@ -617,11 +617,14 @@ button:focus-visible,
 .contact-icon {
   width: 34px;
   height: 34px;
+  min-width: 34px;
+  min-height: 34px;
   border-radius: 999px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.1rem;
+  flex-shrink: 0;
   transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease;
 }
 
@@ -1722,10 +1725,6 @@ button:focus-visible,
   .sobre-timeline-item::before {
     left: -20px;
   }
-}
-
-section+section {
-  border-top: 1px solid rgba(13, 59, 92, 0.05);
 }
 
 .btn-primary,

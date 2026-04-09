@@ -627,7 +627,7 @@
                         <a href="contacto.php" class="btn-hero-main">
                             <i class="bi bi-send-fill"></i> Enviar mensagem
                         </a>
-                        <a href="https://wa.me/351939982878" target="_blank" class="btn-hero-secondary">
+                        <a href="https://wa.me/351939982878" target="_blank" rel="noopener noreferrer" class="btn-hero-secondary">
                             <i class="bi bi-whatsapp"></i> WhatsApp
                         </a>
                     </div>

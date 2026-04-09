@@ -67,7 +67,7 @@
             </li>
             <li class="footer-contact-item">
               <i class="bi bi-whatsapp me-2"></i>
-              <a href="https://wa.me/351939982878" target="_blank" class="footer-link">
+              <a href="https://wa.me/351939982878" target="_blank" rel="noopener noreferrer" class="footer-link">
                 Fale connosco no WhatsApp
               </a>
             </li>
@@ -83,10 +83,10 @@
           <div class="d-md-none mt-4">
             <h5 class="footer-title mb-2">Segue-nos</h5>
             <div class="footer-social d-flex flex-wrap gap-2">
-              <a href="https://www.facebook.com/cdoispontos" target="_blank" class="footer-social-btn facebook">
+              <a href="https://www.facebook.com/cdoispontos" target="_blank" rel="noopener noreferrer" class="footer-social-btn facebook">
                 <i class="bi bi-facebook"></i>
               </a>
-              <a href="https://wa.me/351939982878" target="_blank" class="footer-social-btn whatsapp">
+              <a href="https://wa.me/351939982878" target="_blank" rel="noopener noreferrer" class="footer-social-btn whatsapp">
                 <i class="bi bi-whatsapp"></i>
               </a>
             </div>
@@ -103,10 +103,10 @@
 
           <h5 class="footer-title mb-2">Segue-nos</h5>
           <div class="footer-social d-flex flex-wrap gap-2">
-            <a href="https://www.facebook.com/cdoispontos" target="_blank" class="footer-social-btn facebook">
+            <a href="https://www.facebook.com/cdoispontos" target="_blank" rel="noopener noreferrer" class="footer-social-btn facebook">
               <i class="bi bi-facebook"></i>
             </a>
-            <a href="https://wa.me/351939982878" target="_blank" class="footer-social-btn whatsapp">
+            <a href="https://wa.me/351939982878" target="_blank" rel="noopener noreferrer" class="footer-social-btn whatsapp">
               <i class="bi bi-whatsapp"></i>
             </a>
           </div>
@@ -126,7 +126,7 @@
     </div>
 
     <!-- WHATSAPP FLUTUANTE -->
-    <a href="https://wa.me/351939982878" class="whatsapp-float" target="_blank" aria-label="Falar connosco no WhatsApp">
+    <a href="https://wa.me/351939982878" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Falar connosco no WhatsApp">
         <i class="bi bi-whatsapp"></i>
     </a>
 
@@ -151,7 +151,10 @@
             const whatsappBtn = document.querySelector(".whatsapp-float");
             const siteHeader = document.querySelector(".site-header");
 
-            if (!localStorage.getItem("cdoispontos_cookies_accepted")) {
+            const consentKey = "cdoispontos_cookie_consent";
+            const consentValue = localStorage.getItem(consentKey); // accepted | rejected | null
+
+            if (!consentValue) {
                 cookieBanner.style.display = "flex";
                 // Move o WhatsApp para cima se o banner estiver visível
                 if (whatsappBtn) {
@@ -163,8 +166,8 @@
                 }
             }
 
-            const handleConsent = () => {
-                localStorage.setItem("cdoispontos_cookies_accepted", "true");
+            const handleConsent = (decision) => {
+                localStorage.setItem(consentKey, decision);
                 cookieBanner.style.display = "none";
                 // Repõe o WhatsApp na posição original
                 if (whatsappBtn) {
@@ -172,8 +175,8 @@
                 }
             };
 
-            if(acceptBtn) acceptBtn.addEventListener("click", handleConsent);
-            if(rejectBtn) rejectBtn.addEventListener("click", handleConsent);
+            if(acceptBtn) acceptBtn.addEventListener("click", () => handleConsent("accepted"));
+            if(rejectBtn) rejectBtn.addEventListener("click", () => handleConsent("rejected"));
 
             // Header premium ao scroll
             const syncHeaderState = () => {
