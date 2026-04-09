@@ -1,10 +1,29 @@
 <?php
+require_once __DIR__ . '/vendor/autoload.php';
+
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\PHPMailer;
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+function envOrDefault(string $key, ?string $default = null): ?string
+{
+    $value = getenv($key);
+    if ($value === false || $value === '') {
+        return $default;
+    }
+    return $value;
+}
+
 $mensagemStatus = '';
 $nome = '';
 $email = '';
 $telefone = '';
 $assunto = '';
 $mensagem = '';
+$formStartedAt = time();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = strip_tags(trim($_POST["nome"] ?? ''));
@@ -12,15 +31,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telefone = strip_tags(trim($_POST["telefone"] ?? ''));
     $assunto = strip_tags(trim($_POST["assunto"] ?? ''));
     $mensagem = trim($_POST["mensagem"] ?? '');
+    $honeypot = trim($_POST["website"] ?? '');
+    $formStartedRaw = trim($_POST["form_started"] ?? '');
+    $formStarted = ctype_digit($formStartedRaw) ? (int)$formStartedRaw : 0;
+    $now = time();
+    $elapsed = ($formStarted > 0) ? ($now - $formStarted) : 0;
+    $formStartedAt = $formStarted > 0 ? $formStarted : $formStartedAt;
 
     // Evitar quebra de headers de email em campos vindos do formulário.
     $nomeSafeHeader = str_replace(["\r", "\n"], '', $nome);
     $emailSafeHeader = str_replace(["\r", "\n"], '', (string)$email);
 
-    if (empty($nome) || empty($assunto) || empty($mensagem) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    if ($honeypot !== '') {
+        // Honeypot preenchido: trata como spam silenciosamente.
+        $mensagemStatus = '<div class="alert alert-success py-2 small mb-3">Mensagem enviada com sucesso! Entraremos em contacto brevemente.</div>';
+    } elseif ($elapsed > 0 && $elapsed < 3) {
+        // Submissão demasiado rápida para um humano.
+        $mensagemStatus = '<div class="alert alert-danger py-2 small mb-3">Submissão inválida. Tenta novamente.</div>';
+    } elseif (empty($nome) || empty($assunto) || empty($mensagem) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $mensagemStatus = '<div class="alert alert-danger py-2 small mb-3">Por favor, preenche todos os campos obrigatórios e verifica o teu email.</div>';
     } else {
-        $destinatario = "cdoispontos.amorosa@gmail.com";
+        $rateWindowSeconds = 10 * 60; // 10 minutos
+        $maxAttemptsInWindow = 3;
+        $minSecondsBetweenSubmissions = 20;
+        $submissionTimestamps = $_SESSION["contact_form_submissions"] ?? [];
+        $submissionTimestamps = array_values(array_filter($submissionTimestamps, function ($ts) use ($now, $rateWindowSeconds) {
+            return is_int($ts) && ($now - $ts) <= $rateWindowSeconds;
+        }));
+        $_SESSION["contact_form_submissions"] = $submissionTimestamps;
+
+        $lastSubmission = !empty($submissionTimestamps) ? end($submissionTimestamps) : null;
+        if (count($submissionTimestamps) >= $maxAttemptsInWindow) {
+            $mensagemStatus = '<div class="alert alert-danger py-2 small mb-3">Fizeste demasiadas tentativas num curto período. Tenta novamente daqui a alguns minutos.</div>';
+        } elseif (is_int($lastSubmission) && ($now - $lastSubmission) < $minSecondsBetweenSubmissions) {
+            $mensagemStatus = '<div class="alert alert-danger py-2 small mb-3">Aguarda alguns segundos antes de enviar outra mensagem.</div>';
+        } else {
+        $destinatario = envOrDefault('MAIL_TO', 'cdoispontos.amorosa@gmail.com');
         $assunto_email = "Novo Contacto do Site: $assunto";
         
         $conteudo = "Novo Contacto - Site CDoisPontos\n";
@@ -32,14 +78,62 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $conteudo .= "-----------------------------------\n\n";
         $conteudo .= "Mensagem:\n$mensagem\n";
 
-        $headers = "From: $nomeSafeHeader <$emailSafeHeader>\r\n";
-        $headers .= "Reply-To: $emailSafeHeader\r\n";
-        $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+        try {
+            $mail = new PHPMailer(true);
 
-        if (mail($destinatario, $assunto_email, $conteudo, $headers)) {
+            // Configuração SMTP pronta para produção por variáveis de ambiente.
+            // Exemplo:
+            // MAIL_HOST=smtp.gmail.com
+            // MAIL_PORT=587
+            // MAIL_USERNAME=...
+            // MAIL_PASSWORD=...
+            // MAIL_ENCRYPTION=tls
+            $smtpHost = envOrDefault('MAIL_HOST');
+            $smtpPort = (int)envOrDefault('MAIL_PORT', '587');
+            $smtpUser = envOrDefault('MAIL_USERNAME');
+            $smtpPass = envOrDefault('MAIL_PASSWORD');
+            $smtpEncryption = envOrDefault('MAIL_ENCRYPTION', 'tls'); // tls | ssl
+            $mailFromAddress = envOrDefault('MAIL_FROM_ADDRESS', 'noreply@cdoispontos.pt');
+            $mailFromName = envOrDefault('MAIL_FROM_NAME', 'CDoisPontos Website');
+
+            if ($smtpHost && $smtpUser && $smtpPass) {
+                $mail->isSMTP();
+                $mail->Host = $smtpHost;
+                $mail->SMTPAuth = true;
+                $mail->Username = $smtpUser;
+                $mail->Password = $smtpPass;
+                $mail->Port = $smtpPort;
+                $mail->CharSet = 'UTF-8';
+
+                if ($smtpEncryption === 'ssl') {
+                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+                } else {
+                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+                }
+            } else {
+                // Fallback local para desenvolvimento.
+                $mail->isMail();
+                $mail->CharSet = 'UTF-8';
+            }
+
+            $mail->setFrom($mailFromAddress, $mailFromName);
+            $mail->addAddress($destinatario);
+            $mail->addReplyTo($emailSafeHeader, $nomeSafeHeader ?: 'Cliente');
+            $mail->Subject = $assunto_email;
+            $mail->Body = $conteudo;
+
+            $mail->send();
+            $_SESSION["contact_form_submissions"][] = $now;
             $mensagemStatus = '<div class="alert alert-success py-2 small mb-3">Mensagem enviada com sucesso! Entraremos em contacto brevemente.</div>';
-        } else {
+            $nome = '';
+            $email = '';
+            $telefone = '';
+            $assunto = '';
+            $mensagem = '';
+            $formStartedAt = time();
+        } catch (Exception $e) {
             $mensagemStatus = '<div class="alert alert-danger py-2 small mb-3">Ocorreu um erro ao enviar a mensagem. Se o problema persistir, contacta-nos via WhatsApp.</div>';
+        }
         }
     }
 }
@@ -137,6 +231,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <?php echo $mensagemStatus; ?>
 
               <form method="POST" action="contacto.php" class="form-modern row g-4" autocomplete="on">
+                <input type="hidden" name="form_started" value="<?php echo (int)$formStartedAt; ?>">
+                <div style="position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;" aria-hidden="true">
+                  <label for="contacto-website">Website</label>
+                  <input id="contacto-website" type="text" name="website" tabindex="-1" autocomplete="off">
+                </div>
                 <div class="col-md-6">
                   <label class="form-label" for="contacto-nome">Nome Completo</label>
                   <input id="contacto-nome" type="text" name="nome" class="form-control" placeholder="Ex: João Silva" autocomplete="name" value="<?php echo htmlspecialchars($nome, ENT_QUOTES, 'UTF-8'); ?>" required>

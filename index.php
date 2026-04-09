@@ -45,7 +45,7 @@
         <!-- Imagem / mockup -->
         <div class="col-lg-6 text-center">
           <div class="hero-card shadow-lg">
-            <img src="imagens/logo.png" alt="CDoisPontos" class="img-fluid hero-image">
+            <img src="imagens/logo.png" alt="Logótipo da CDoisPontos" class="img-fluid hero-image" loading="eager" decoding="async">
           </div>
         </div>
 
@@ -130,66 +130,66 @@
           <!-- Multiplicamos os itens para garantir o efeito de loop infinito suave -->
           <!-- Pack 1 -->
           <div class="brand-logo-item">
-            <img src="imagens/apple.png" alt="Marca 1" class="brand-placeholder">
+            <img src="imagens/apple.png" alt="Apple" class="brand-placeholder" loading="lazy" decoding="async">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/samsung.png" alt="Marca 2" class="brand-placeholder scale-up-3">
+            <img src="imagens/samsung.png" alt="Samsung" class="brand-placeholder scale-up-3" loading="lazy" decoding="async">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/microsoft.png" alt="Marca 3" class="brand-placeholder scale-up-3">
+            <img src="imagens/microsoft.png" alt="Microsoft" class="brand-placeholder scale-up-3" loading="lazy" decoding="async">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/intel.png" alt="Marca 4" class="brand-placeholder scale-up-2">
+            <img src="imagens/intel.png" alt="Intel" class="brand-placeholder scale-up-2" loading="lazy" decoding="async">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/hp.png" alt="Marca 5" class="brand-placeholder">
+            <img src="imagens/hp.png" alt="HP" class="brand-placeholder" loading="lazy" decoding="async">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/sony.png" alt="Marca 6" class="brand-placeholder">
+            <img src="imagens/sony.png" alt="Sony" class="brand-placeholder" loading="lazy" decoding="async">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/lenovo.png" alt="Marca 7" class="brand-placeholder scale-up-2">
+            <img src="imagens/lenovo.png" alt="Lenovo" class="brand-placeholder scale-up-2" loading="lazy" decoding="async">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/dell.png" alt="Marca 8" class="brand-placeholder">
+            <img src="imagens/dell.png" alt="Dell" class="brand-placeholder" loading="lazy" decoding="async">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/asus.png" alt="Marca 9" class="brand-placeholder">
+            <img src="imagens/asus.png" alt="ASUS" class="brand-placeholder" loading="lazy" decoding="async">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/logitech.png" alt="Marca 10" class="brand-placeholder">
+            <img src="imagens/logitech.png" alt="Logitech" class="brand-placeholder" loading="lazy" decoding="async">
           </div>
           
           <!-- Pack 2 (Cópia para o Loop) -->
           <div class="brand-logo-item">
-            <img src="imagens/apple.png" alt="Marca 1" class="brand-placeholder">
+            <img src="imagens/apple.png" alt="Apple" class="brand-placeholder" loading="lazy" decoding="async">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/samsung.png" alt="Marca 2" class="brand-placeholder scale-up-3">
+            <img src="imagens/samsung.png" alt="Samsung" class="brand-placeholder scale-up-3" loading="lazy" decoding="async">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/microsoft.png" alt="Marca 3" class="brand-placeholder scale-up-3">
+            <img src="imagens/microsoft.png" alt="Microsoft" class="brand-placeholder scale-up-3" loading="lazy" decoding="async">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/intel.png" alt="Marca 4" class="brand-placeholder scale-up-2">
+            <img src="imagens/intel.png" alt="Intel" class="brand-placeholder scale-up-2" loading="lazy" decoding="async">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/hp.png" alt="Marca 5" class="brand-placeholder">
+            <img src="imagens/hp.png" alt="HP" class="brand-placeholder" loading="lazy" decoding="async">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/sony.png" alt="Marca 6" class="brand-placeholder">
+            <img src="imagens/sony.png" alt="Sony" class="brand-placeholder" loading="lazy" decoding="async">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/lenovo.png" alt="Marca 7" class="brand-placeholder scale-up-2">
+            <img src="imagens/lenovo.png" alt="Lenovo" class="brand-placeholder scale-up-2" loading="lazy" decoding="async">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/dell.png" alt="Marca 8" class="brand-placeholder">
+            <img src="imagens/dell.png" alt="Dell" class="brand-placeholder" loading="lazy" decoding="async">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/asus.png" alt="Marca 9" class="brand-placeholder">
+            <img src="imagens/asus.png" alt="ASUS" class="brand-placeholder" loading="lazy" decoding="async">
           </div>
           <div class="brand-logo-item">
-            <img src="imagens/logitech.png" alt="Marca 10" class="brand-placeholder">
+            <img src="imagens/logitech.png" alt="Logitech" class="brand-placeholder" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -336,8 +336,10 @@
 
               <div class="map-wrapper-location">
                 <iframe
-                  class="map-iframe"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1253.5678755583508!2d-8.81945317423816!3d41.644858480408054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd25b5e96f497cdf%3A0x334ec8653e63d143!2sCDoisPontos%20Amorosa%2C%20Lda.!5e0!3m2!1spt-PT!2spt!4v1773327768017!5m2!1spt-PT!2spt"
+                  data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1253.5678755583508!2d-8.81945317423816!3d41.644858480408054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd25b5e96f497cdf%3A0x334ec8653e63d143!2sCDoisPontos%20Amorosa%2C%20Lda.!5e0!3m2!1spt-PT!2spt!4v1773327768017!5m2!1spt-PT!2spt"
+                  title="Mapa com a localização da CDoisPontos na Praia da Amorosa"
+                  aria-label="Mapa com a localização da CDoisPontos"
+                  class="map-iframe lazy-map-iframe"
                   style="border:0;"
                   allowfullscreen=""
                   loading="lazy"

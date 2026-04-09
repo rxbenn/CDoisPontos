@@ -131,7 +131,7 @@
     </a>
 
     <!-- BANNER DE COOKIES (RGPD) -->
-    <div id="cookieConsentBanner" class="cookie-banner">
+    <div id="cookieConsentBanner" class="cookie-banner" style="display: none;">
         <div class="cookie-content">
             <i class="bi bi-info-circle-fill text-warning me-2"></i>
             <span>Utilizamos cookies estritamente essenciais para garantir o funcionamento correto e fluído do site. <span style="white-space: nowrap;"><a href="politica-privacidade.php" class="text-white text-decoration-underline ms-1 fw-bold">Saber mais</a></span></span>
@@ -152,7 +152,35 @@
             const siteHeader = document.querySelector(".site-header");
 
             const consentKey = "cdoispontos_cookie_consent";
-            const consentValue = localStorage.getItem(consentKey); // accepted | rejected | null
+            const legacyConsentKey = "cdoispontos_cookies_accepted";
+            let consentValue = null; // accepted | rejected | null
+
+            const getConsent = () => {
+                try {
+                    const current = localStorage.getItem(consentKey);
+                    if (current) return current;
+
+                    // Migração de chave antiga: "true" passa a "accepted".
+                    const legacy = localStorage.getItem(legacyConsentKey);
+                    if (legacy === "true") {
+                        localStorage.setItem(consentKey, "accepted");
+                        return "accepted";
+                    }
+                    return null;
+                } catch (e) {
+                    return null;
+                }
+            };
+
+            const setConsent = (decision) => {
+                try {
+                    localStorage.setItem(consentKey, decision);
+                } catch (e) {
+                    // Se o browser bloquear storage, seguimos sem persistência.
+                }
+            };
+
+            consentValue = getConsent();
 
             if (!consentValue) {
                 cookieBanner.style.display = "flex";
@@ -167,7 +195,7 @@
             }
 
             const handleConsent = (decision) => {
-                localStorage.setItem(consentKey, decision);
+                setConsent(decision);
                 cookieBanner.style.display = "none";
                 // Repõe o WhatsApp na posição original
                 if (whatsappBtn) {
@@ -185,6 +213,34 @@
             };
             syncHeaderState();
             window.addEventListener("scroll", syncHeaderState, { passive: true });
+
+            // Lazy load de iframes com data-src (ex.: mapa no index)
+            const lazyIframes = document.querySelectorAll("iframe.lazy-map-iframe[data-src]");
+            if (lazyIframes.length) {
+                const loadIframe = (iframe) => {
+                    if (!iframe || iframe.getAttribute("src")) return;
+                    const src = iframe.getAttribute("data-src");
+                    if (src) iframe.setAttribute("src", src);
+                };
+
+                if ("IntersectionObserver" in window) {
+                    const iframeObserver = new IntersectionObserver((entries, obs) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                loadIframe(entry.target);
+                                obs.unobserve(entry.target);
+                            }
+                        });
+                    }, {
+                        rootMargin: "200px 0px 200px 0px",
+                        threshold: 0.01
+                    });
+
+                    lazyIframes.forEach((iframe) => iframeObserver.observe(iframe));
+                } else {
+                    lazyIframes.forEach(loadIframe);
+                }
+            }
 
             // Reveal-on-scroll discreto para secções e cartões
             const revealTargets = document.querySelectorAll(
