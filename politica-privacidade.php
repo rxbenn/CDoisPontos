@@ -34,7 +34,7 @@ $mensagemStatus = '';
               Privacidade e <span class="brand-accent">Termos Legais</span>
             </h1>
             <p class="sobre-hero-text mb-0 opacity-75">
-              O nosso compromisso inabalável com a proteção dos teus dados e transparência.
+              O nosso compromisso com a proteção dos seus dados e transparência.
             </p>
           </div>
         </div>
@@ -49,16 +49,16 @@ $mensagemStatus = '';
               
               <h3 class="h4 fw-bold mb-4"><i class="bi bi-shield-check text-success me-2"></i>1. Política de Privacidade (RGPD)</h3>
               <p class="text-muted small mb-5">
-                A <strong>CDoisPontos</strong>, localizada na Praia da Amorosa, compromete-se a proteger a tua privacidade.
-                A recolha e tratamento de dados pessoais (como Nome, Email e Telemóvel) através dos formulários do nosso site e na nossa loja física
-                são estritamente utilizados para efeitos de resposta a pedidos de contacto, elaboração de orçamentos, e gestão de assistência técnica dos equipamentos deixados à nossa responsabilidade.
-                Garantimos que os teus dados não serão partilhados com entidades terceiras para fins de marketing sem o teu consentimento expresso.
+                A <strong>CDoisPontos</strong>, localizada na Praia da Amorosa, compromete-se a proteger a privacidade dos seus clientes.
+                Os dados pessoais recolhidos (como nome, email e telemóvel), através do website ou na loja física, são utilizados exclusivamente para
+                efeitos de resposta a pedidos de contacto, elaboração de orçamentos, e gestão de assistência técnica dos equipamentos deixados à nossa responsabilidade.<br><br>
+                A CDoisPontos garante que os dados não serão partilhados com terceiros para fins de marketing sem consentimento explícito.
               </p>
 
               <h3 class="h4 fw-bold mb-4"><i class="bi bi-cookie text-warning me-2"></i>2. Política de Cookies</h3>
               <p class="text-muted small mb-5">
-                Utilizamos cookies de sessão e locais (localStorage) estritamente necessários para permitir que o nosso website funcione corretamente, garantindo a tua segurança, memorização de preferências e uma boa experiência de navegação. 
-                Não utilizamos cookies de rastreamento de anúncios cruzados. Ao continuares a explorar o nosso site e clicares em "Compreendi" no banner inferior, aceitas o uso limitadíssimo e interno de tecnologias de armazenamento local.
+                Utilizamos cookies de sessão e locais (localStorage) necessários para o seu correto funcionamento do website, segurança e melhoria da experiência de navegação.<br>
+                Não são utilizados cookies para fins de rastreamento publicitário. Ao continuar a utilizar este website, concorda com a utilização destas tecnologias.
               </p>
 
               <h3 class="h4 fw-bold mb-4"><i class="bi bi-tools text-primary me-2"></i>3. Garantias de Reparação e Equipamentos</h3>
@@ -69,7 +69,7 @@ $mensagemStatus = '';
 
               <div class="mt-5 pt-4 border-top">
                 <p class="text-muted smaller mb-0">
-                  Para dúvidas e requerimento do "Direito ao Esquecimento" da Base de Dados conforme o RGPD em vigor, por favor contacta: <strong>cdoispontos.amorosa@gmail.com</strong>
+                  Para qualquer questão relacionada com dados pessoais ou para exercer o direito ao esquecimento, poderá contactar: <strong>cdoispontos.amorosa@gmail.com</strong>
                 </p>
               </div>
 

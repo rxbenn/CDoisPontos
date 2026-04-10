@@ -47,9 +47,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mensagemStatus = '<div class="alert alert-success py-2 small mb-3">Mensagem enviada com sucesso! Entraremos em contacto brevemente.</div>';
     } elseif ($elapsed > 0 && $elapsed < 3) {
         // Submissão demasiado rápida para um humano.
-        $mensagemStatus = '<div class="alert alert-danger py-2 small mb-3">Submissão inválida. Tenta novamente.</div>';
+        $mensagemStatus = '<div class="alert alert-danger py-2 small mb-3">Submissão inválida. Tente novamente.</div>';
     } elseif (empty($nome) || empty($assunto) || empty($mensagem) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $mensagemStatus = '<div class="alert alert-danger py-2 small mb-3">Por favor, preenche todos os campos obrigatórios e verifica o teu email.</div>';
+        $mensagemStatus = '<div class="alert alert-danger py-2 small mb-3">Por favor, preencha todos os campos obrigatórios e verifique o seu email.</div>';
     } else {
         $rateWindowSeconds = 10 * 60; // 10 minutos
         $maxAttemptsInWindow = 3;
@@ -62,9 +62,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $lastSubmission = !empty($submissionTimestamps) ? end($submissionTimestamps) : null;
         if (count($submissionTimestamps) >= $maxAttemptsInWindow) {
-            $mensagemStatus = '<div class="alert alert-danger py-2 small mb-3">Fizeste demasiadas tentativas num curto período. Tenta novamente daqui a alguns minutos.</div>';
+            $mensagemStatus = '<div class="alert alert-danger py-2 small mb-3">Fez demasiadas tentativas num curto período. Tente novamente daqui a alguns minutos.</div>';
         } elseif (is_int($lastSubmission) && ($now - $lastSubmission) < $minSecondsBetweenSubmissions) {
-            $mensagemStatus = '<div class="alert alert-danger py-2 small mb-3">Aguarda alguns segundos antes de enviar outra mensagem.</div>';
+            $mensagemStatus = '<div class="alert alert-danger py-2 small mb-3">Aguarde alguns segundos antes de enviar outra mensagem.</div>';
         } else {
         $destinatario = envOrDefault('MAIL_TO', 'cdoispontos.amorosa@gmail.com');
         $assunto_email = "Novo Contacto do Site: $assunto";
@@ -218,7 +218,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 
                 <div class="mt-5 pt-3 border-top text-center text-lg-start">
                     <p class="text-muted smaller mb-0">
-                      Entramos em contacto via email ou telemóvel para dar seguimento ao teu pedido.
+                      Entramos em contacto por email ou telemóvel para dar seguimento ao seu pedido.
                     </p>
                 </div>
              </div>

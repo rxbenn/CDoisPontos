@@ -80,7 +80,7 @@
               <p class="mb-0">
                 De equipamentos informáticos aos eletrodomésticos, passando por mobilidade elétrica,
                 tablets, gadgets, TVs, artigos de jardim e muito mais — até à reparação de equipamentos
-                eletrónicos e informáticos com diagnóstico claro e acompanhamento personalizado.
+                eletrónicos e informáticos, com diagnóstico claro e acompanhamento personalizado.
               </p>
             </article>
           </div>
@@ -90,9 +90,9 @@
               <h3 class="mb-3">O que nos define</h3>
               <ul class="list-unstyled mb-4 small sobre-list">
                 <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill me-2 text-success fs-5"></i> +20 anos de experiência na área.</li>
-                <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill me-2 text-success fs-5"></i> Diagnóstico e opções claras.</li>
-                <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill me-2 text-success fs-5"></i> Portefólio amplo de lazer e TI.</li>
-                <li class="mb-0 d-flex align-items-center"><i class="bi bi-check-circle-fill me-2 text-success fs-5"></i> Transparência nas reparações.</li>
+                <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill me-2 text-success fs-5"></i> Diagnóstico claro e opções bem explicadas.</li>
+                <li class="mb-3 d-flex align-items-center"><i class="bi bi-check-circle-fill me-2 text-success fs-5"></i> Oferta abrangente em tecnologia e lazer.</li>
+                <li class="mb-0 d-flex align-items-center"><i class="bi bi-check-circle-fill me-2 text-success fs-5"></i> Transparência em todas as reparações.</li>
               </ul>
               <a href="index.php#localizacao-contactos" class="btn btn-outline-primary btn-sm rounded-pill px-4">
                 <i class="bi bi-geo-alt-fill me-1"></i> Ver localização e contactos
@@ -122,7 +122,7 @@
               </div>
               <h3 class="highlight-title">Reparação de telemóveis</h3>
               <p class="highlight-text mb-0">
-                Troca de ecrãs, baterias, conetores e outros componentes, com diagnóstico claro e acompanhamento.
+                Substituição de ecrãs, baterias, conetores e outros componentes, com diagnóstico claro e acompanhamento.
               </p>
             </div>
           </div>
@@ -134,7 +134,7 @@
               </div>
               <h3 class="highlight-title">Reparação de computadores</h3>
               <p class="highlight-text mb-0">
-                Limpeza interna, otimização de sistema, upgrades de SSD/RAM e reparações de hardware.
+                Limpeza interna, otimização do sistema, upgrades de SSD/RAM e reparações de hardware.
               </p>
             </div>
           </div>
@@ -146,7 +146,7 @@
               </div>
               <h3 class="highlight-title">Assistência técnica</h3>
               <p class="highlight-text mb-0">
-                Suporte na configuração de equipamentos, software, redes domésticas e pequenas empresas.
+                Apoio na configuração de equipamentos, software e redes (domésticas e empresariais).
               </p>
             </div>
           </div>

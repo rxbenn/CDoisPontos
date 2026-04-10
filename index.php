@@ -84,7 +84,7 @@
             </div>
             <h3 class="highlight-title">Reparação de equipamentos</h3>
             <p class="highlight-text mb-0">
-              Substituição de ecrãs, baterias, conetores e outros componentes, sempre com diagnóstico transparente.
+              Substituição de ecrãs, baterias, conetores e outros componentes, com diagnóstico claro e acompanhamento.
             </p>
           </article>
         </div>
@@ -96,7 +96,7 @@
             </div>
             <h3 class="highlight-title">Tecnologia e acessórios</h3>
             <p class="highlight-text mb-0">
-              Equipamentos e periféricos selecionados para uso diário e profissional.
+              Equipamentos e periféricos selecionados para o dia a dia e para uso profissional.
             </p>
           </article>
         </div>
@@ -108,7 +108,7 @@
             </div>
             <h3 class="highlight-title">Assistência técnica</h3>
             <p class="highlight-text mb-0">
-              Aconselhamento especializado e apoio na configuração de equipamentos e software.
+              Apoio na configuração de equipamentos, software e conectividade, com aconselhamento especializado.
             </p>
           </article>
         </div>

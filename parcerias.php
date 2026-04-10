@@ -604,6 +604,10 @@
                     <div class="brand-logo-item">
                         <img src="imagens/xdsoftware.png" alt="XD Software" class="brand-placeholder">
                     </div>
+                    <!-- Wintouch -->
+                    <div class="brand-logo-item">
+                        <img src="imagens/wintouch.png" alt="Wintouch" class="brand-placeholder">
+                    </div>
                     <!-- ZoneSoft -->
                     <div class="brand-logo-item">
                         <img src="imagens/zonesoft.png" alt="ZoneSoft" class="brand-placeholder">
