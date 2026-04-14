@@ -27,7 +27,7 @@
                 </nav>
                 <div class="row align-items-center g-4">
                     <div class="col-lg-7">
-                        <h1 class="sobre-hero-title mb-3">Nossas <span class="brand-accent">Parcerias </span></h1>
+                        <h1 class="sobre-hero-title mb-3">As nossas <span class="brand-accent">parcerias</span></h1>
                         <p class="sobre-hero-text mb-0">
                             Trabalhamos com marcas de referência para garantir equipamentos e soluções de gestão fiáveis para o seu negócio.
                         </p>
@@ -36,8 +36,28 @@
             </div>
         </section>
 
+        <!-- NAVEGAÇÃO RÁPIDA -->
+        <section class="sobre-section pt-4 pb-0">
+            <div class="container">
+                <div class="info-card parcerias-quicknav">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                        <div>
+                            <span class="section-eyebrow">Atalhos</span>
+                            <h2 class="h5 fw-bold mb-0">Ir diretamente para</h2>
+                        </div>
+                        <div class="parcerias-quicknav-actions">
+                            <a href="#hardware" class="parcerias-pill"><i class="bi bi-pc-display me-1"></i>Hardware</a>
+                            <a href="#software" class="parcerias-pill"><i class="bi bi-window me-1"></i>Software</a>
+                            <a href="#ponto-pack-parcerias" class="parcerias-pill"><i class="bi bi-box-seam me-1"></i>Ponto Pack</a>
+                            <a href="#operadoras-parcerias" class="parcerias-pill"><i class="bi bi-sim me-1"></i>Operadoras</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- GRID DE MARCAS -->
-        <section class="sobre-section">
+        <section id="hardware" class="sobre-section">
             <div class="container">
                 <div class="text-center mb-5">
                     <span class="section-eyebrow">Marcas que representamos</span>
@@ -571,7 +591,7 @@
         </section>
 
         <!-- SOFTWARE DE GESTÃO -->
-        <section class="sobre-section pt-0">
+        <section id="software" class="sobre-section pt-0">
             <div class="container">
                 <div class="text-center mb-5 mt-4">
                     <span class="section-eyebrow">Soluções digitais</span>
@@ -616,15 +636,85 @@
             </div>
         </section>
 
+        <!-- PONTO PACK (TRANSPORTADORAS) -->
+        <section id="ponto-pack-parcerias" class="sobre-section pt-0">
+            <div class="container">
+                <div class="text-center mb-5 mt-4">
+                    <span class="section-eyebrow">Ponto Pack</span>
+                    <h2 class="section-heading centered d-block">Transportadoras disponíveis</h2>
+                    <p class="text-muted mt-2 mb-0" style="max-width:520px;margin:0 auto;">
+                        Entrega e recolha de encomendas com transportadoras selecionadas, com a comodidade de tratar tudo num só local.
+                    </p>
+                </div>
+
+                <div class="row g-3 justify-content-center pack-tiles">
+                    <div class="col-6 col-md-4 col-lg-2 animate-soft">
+                        <div class="pack-logo-tile h-100"><img src="imagens/inpost.png" alt="INPOST" loading="lazy" decoding="async"></div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 animate-soft">
+                        <div class="pack-logo-tile h-100"><img src="imagens/dpd.png" alt="DPD" loading="lazy" decoding="async"></div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 animate-soft">
+                        <div class="pack-logo-tile h-100"><img src="imagens/seur.png" alt="SEUR" loading="lazy" decoding="async"></div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 animate-soft">
+                        <div class="pack-logo-tile h-100"><img src="imagens/gls.png" alt="GLS" loading="lazy" decoding="async"></div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 animate-soft">
+                        <div class="pack-logo-tile h-100"><img src="imagens/dhl.png" alt="DHL" loading="lazy" decoding="async"></div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 animate-soft">
+                        <div class="pack-logo-tile h-100"><img src="imagens/celeritas.png" alt="CELERITAS" loading="lazy" decoding="async"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OPERADORAS (AGENTE AUTORIZADO) -->
+        <section id="operadoras-parcerias" class="sobre-section pt-0">
+            <div class="container">
+                <div class="text-center mb-5 mt-4">
+                    <span class="section-eyebrow">Agente autorizado</span>
+                    <h2 class="section-heading centered d-block">Operadoras disponíveis</h2>
+                    <p class="text-muted mt-2 mb-0" style="max-width:520px;margin:0 auto;">
+                        Serviços oficiais e apoio em processos selecionados das principais operadoras.
+                    </p>
+                </div>
+
+                <div class="row g-3 justify-content-center">
+                    <div class="col-6 col-md-3 animate-soft">
+                        <div class="agente-tile h-100">
+                            <img src="imagens/meo.png" alt="MEO" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 animate-soft">
+                        <div class="agente-tile h-100">
+                            <img src="imagens/vodafone.png" alt="Vodafone" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 animate-soft">
+                        <div class="agente-tile h-100">
+                            <img src="imagens/nos.png" alt="NOS" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 animate-soft">
+                        <div class="agente-tile h-100">
+                            <img src="imagens/digi.png" alt="DIGI" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- CTA FINAL: CONTACTO -->
         <section class="sobre-section parcerias-cta">
             <div class="container">
                 <div class="row align-items-center g-4">
                     <div class="col-lg-7">
-                        <span class="section-eyebrow">Precisas de ajuda?</span>
-                        <h2 class="mt-1 mb-2">Fala connosco sobre qualquer marca</h2>
+                        <span class="section-eyebrow">Precisa de ajuda?</span>
+                        <h2 class="mt-1 mb-2">Fale connosco sobre qualquer marca</h2>
                         <p class="mb-0">
-                            Tens dúvidas sobre alguma das nossas marcas parceiras, serviços ou precisas de aconselhamento técnico? Estamos disponíveis para ajudar.
+                            Tem dúvidas sobre alguma das nossas marcas parceiras, serviços ou precisa de aconselhamento técnico? Estamos disponíveis para ajudar.
                         </p>
                     </div>
                     <div class="col-lg-5 d-flex flex-wrap gap-3 justify-content-lg-end">

@@ -69,7 +69,7 @@ $mensagemStatus = '';
 
               <div class="mt-5 pt-4 border-top">
                 <p class="text-muted smaller mb-0">
-                  Para qualquer questão relacionada com dados pessoais ou para exercer o direito ao esquecimento, poderá contactar: <strong>cdoispontos.amorosa@gmail.com</strong>
+                  Para qualquer questão relacionada com dados pessoais ou para exercer o direito ao esquecimento, poderá contactar: <strong>geral@c2pontosamorosa.pt</strong>
                 </p>
               </div>
 

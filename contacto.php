@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } elseif (is_int($lastSubmission) && ($now - $lastSubmission) < $minSecondsBetweenSubmissions) {
             $mensagemStatus = '<div class="alert alert-danger py-2 small mb-3">Aguarde alguns segundos antes de enviar outra mensagem.</div>';
         } else {
-        $destinatario = envOrDefault('MAIL_TO', 'cdoispontos.amorosa@gmail.com');
+        $destinatario = envOrDefault('MAIL_TO', 'geral@c2pontosamorosa.pt');
         $assunto_email = "Novo Contacto do Site: $assunto";
         
         $conteudo = "Novo Contacto - Site CDoisPontos\n";

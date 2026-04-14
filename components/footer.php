@@ -33,6 +33,7 @@
             <li><a href="index.php" class="footer-link">Início</a></li>
             <li><a href="sobre.php" class="footer-link">Sobre</a></li>
             <li><a href="parcerias.php" class="footer-link">Parcerias</a></li>
+            <li><a href="ponto-pack.php" class="footer-link">Ponto Pack</a></li>
             <li><a href="contacto.php" class="footer-link">Contacto</a></li>
             <li><a href="politica-privacidade.php" class="footer-link mt-2 text-white-50 small"><i class="bi bi-shield-lock me-1"></i>Privacidade e RGPD</a></li>
           </ul>
@@ -61,8 +62,8 @@
             </li>
             <li class="footer-contact-item">
               <i class="bi bi-envelope-fill me-2"></i>
-              <a href="mailto:cdoispontos.amorosa@gmail.com" class="footer-link text-break">
-                cdoispontos.amorosa@gmail.com
+              <a href="mailto:geral@c2pontosamorosa.pt" class="footer-link text-break">
+                geral@c2pontosamorosa.pt
               </a>
             </li>
             <li class="footer-contact-item">
