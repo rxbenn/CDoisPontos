@@ -6,7 +6,7 @@
         <!-- Coluna 1: Logo + descrição -->
         <div class="col-12 col-md-6 col-lg-4">
           <div class="d-flex align-items-center mb-3">
-            <img src="imagens/logo.png" alt="CDoisPontos" class="footer-logo">
+            <img src="imagens/logo-footer.webp" alt="CDoisPontos" class="footer-logo" loading="lazy" decoding="async">
             <span class="footer-brand ms-2">
               C<span class="brand-accent">Dois</span>Pontos
             </span>
@@ -156,6 +156,28 @@
             const legacyConsentKey = "cdoispontos_cookies_accepted";
             let consentValue = null; // accepted | rejected | null
 
+            // Otimizações seguras de carregamento para listas longas de marcas/logótipos.
+            const optimizeCollectionImages = () => {
+                const lazySelectors = [
+                    ".marcas-grid img",
+                    ".pack-tiles img",
+                    "#marcas-parceiras .brand-logo-item img"
+                ];
+
+                document.querySelectorAll(lazySelectors.join(",")).forEach((img) => {
+                    if (!img.getAttribute("loading")) img.setAttribute("loading", "lazy");
+                    if (!img.getAttribute("decoding")) img.setAttribute("decoding", "async");
+
+                // Evitar alterar dimensão intrínseca para não distorcer logos.
+                });
+            };
+
+            if ("requestIdleCallback" in window) {
+                requestIdleCallback(() => optimizeCollectionImages(), { timeout: 800 });
+            } else {
+                setTimeout(optimizeCollectionImages, 80);
+            }
+
             const getConsent = () => {
                 try {
                     const current = localStorage.getItem(consentKey);
@@ -233,7 +255,7 @@
                             }
                         });
                     }, {
-                        rootMargin: "200px 0px 200px 0px",
+                        rootMargin: "900px 0px 900px 0px",
                         threshold: 0.01
                     });
 
@@ -243,30 +265,26 @@
                 }
             }
 
-            // Reveal-on-scroll discreto para secções e cartões
-            const revealTargets = document.querySelectorAll(
-                "section, .sobre-timeline-item, .marcas-grid .brand-logo-item"
-            );
-            if (revealTargets.length) {
+            // Reveal-on-scroll discreto para cartões
+            const initRevealAnimations = () => {
+                const revealTargets = document.querySelectorAll(
+                    ".animate-soft, .sobre-timeline-item, .marcas-grid .brand-logo-item, .pack-logo-tile, .agente-tile, .cofidis-feature, .accordion .accordion-item"
+                );
+
+                if (!revealTargets.length) return;
+
                 // Mostra logo no carregamento os elementos já na viewport;
                 // os restantes ficam para animação ao scroll.
                 revealTargets.forEach((el) => {
                     const rect = el.getBoundingClientRect();
                     const isInInitialView = rect.top < window.innerHeight * 1.05;
                     el.classList.add("reveal-on-scroll");
-                    if (el.matches("section")) {
-                        el.classList.add("reveal-strong");
-                    } else {
-                        el.classList.add("reveal-soft");
-                    }
+                    el.classList.add("reveal-soft");
 
                     // Stagger discreto por grupo visual (efeito em cascata)
                     const siblings = el.parentElement ? Array.from(el.parentElement.children) : [];
                     const siblingIndex = Math.max(0, siblings.indexOf(el));
-                    let stagger = (siblingIndex % 6) * 45;
-                    if (el.matches(".parcerias-cta")) {
-                        stagger = 0; // aparece sem atraso perceptível
-                    }
+                    const stagger = (siblingIndex % 6) * 45;
                     el.style.setProperty("--reveal-delay", `${stagger}ms`);
 
                     if (isInInitialView) {
@@ -295,6 +313,12 @@
                 } else {
                     revealTargets.forEach((el) => el.classList.add("is-visible"));
                 }
+            };
+
+            if ("requestIdleCallback" in window) {
+                requestIdleCallback(() => initRevealAnimations(), { timeout: 1200 });
+            } else {
+                setTimeout(initRevealAnimations, 120);
             }
         });
     </script>

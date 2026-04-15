@@ -6,6 +6,10 @@
   <title>Ponto Pack — Entrega e Recolha de Encomendas | CDoisPontos</title>
   <meta name="description" content="Ponto Pack na CDoisPontos: entrega e recolha de encomendas com INPOST, DPD, SEUR, GLS, DHL e CELERITAS. Saiba como funciona, informações úteis e FAQ.">
 
+  <!-- Fonts -->
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css">
+
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">

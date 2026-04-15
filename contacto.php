@@ -8,6 +8,12 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
+if (empty($_SESSION['contact_form_csrf'])) {
+    $_SESSION['contact_form_csrf'] = bin2hex(random_bytes(32));
+}
+
+$csrfToken = $_SESSION['contact_form_csrf'];
+
 function envOrDefault(string $key, ?string $default = null): ?string
 {
     $value = getenv($key);
@@ -32,6 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $assunto = strip_tags(trim($_POST["assunto"] ?? ''));
     $mensagem = trim($_POST["mensagem"] ?? '');
     $honeypot = trim($_POST["website"] ?? '');
+    $csrfSubmitted = (string)($_POST["csrf_token"] ?? '');
     $formStartedRaw = trim($_POST["form_started"] ?? '');
     $formStarted = ctype_digit($formStartedRaw) ? (int)$formStartedRaw : 0;
     $now = time();
@@ -42,7 +49,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nomeSafeHeader = str_replace(["\r", "\n"], '', $nome);
     $emailSafeHeader = str_replace(["\r", "\n"], '', (string)$email);
 
-    if ($honeypot !== '') {
+    if (!hash_equals($csrfToken, $csrfSubmitted)) {
+        $mensagemStatus = '<div class="alert alert-danger py-2 small mb-3">Sessão inválida. Atualize a página e tente novamente.</div>';
+    } elseif ($honeypot !== '') {
         // Honeypot preenchido: trata como spam silenciosamente.
         $mensagemStatus = '<div class="alert alert-success py-2 small mb-3">Mensagem enviada com sucesso! Entraremos em contacto brevemente.</div>';
     } elseif ($elapsed > 0 && $elapsed < 3) {
@@ -131,6 +140,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $assunto = '';
             $mensagem = '';
             $formStartedAt = time();
+            $_SESSION['contact_form_csrf'] = bin2hex(random_bytes(32));
+            $csrfToken = $_SESSION['contact_form_csrf'];
         } catch (Exception $e) {
             $mensagemStatus = '<div class="alert alert-danger py-2 small mb-3">Ocorreu um erro ao enviar a mensagem. Se o problema persistir, contacta-nos via WhatsApp.</div>';
         }
@@ -144,7 +155,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto - CDoisPontos</title>
-  <meta name="description" content="Contacta a CDoisPontos em Viana do Castelo. Envia-nos uma mensagem ou fala connosco pelo WhatsApp para reparações, suporte técnico ou qualquer dúvida.">
+  <meta name="description" content="Contacte a CDoisPontos em Viana do Castelo. Envie-nos uma mensagem ou fale connosco pelo WhatsApp para reparações, suporte técnico ou qualquer dúvida.">
+
+  <!-- Fonts -->
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css">
 
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -231,6 +246,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <?php echo $mensagemStatus; ?>
 
               <form method="POST" action="contacto.php" class="form-modern row g-4" autocomplete="on">
+                <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($csrfToken, ENT_QUOTES, 'UTF-8'); ?>">
                 <input type="hidden" name="form_started" value="<?php echo (int)$formStartedAt; ?>">
                 <div style="position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;" aria-hidden="true">
                   <label for="contacto-website">Website</label>
@@ -258,7 +274,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 <div class="col-12">
                   <label class="form-label" for="contacto-mensagem">Mensagem</label>
-                  <textarea id="contacto-mensagem" name="mensagem" class="form-control" rows="6" placeholder="Explica-nos detalhadamente o que precisas..." autocomplete="off" required><?php echo htmlspecialchars($mensagem, ENT_QUOTES, 'UTF-8'); ?></textarea>
+                  <textarea id="contacto-mensagem" name="mensagem" class="form-control" rows="6" placeholder="Explique-nos, com o máximo detalhe, o que precisa..." autocomplete="off" required><?php echo htmlspecialchars($mensagem, ENT_QUOTES, 'UTF-8'); ?></textarea>
                 </div>
 
                 <div class="col-12 mt-4">
@@ -268,7 +284,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                   </button>
                   <div class="text-center mt-3">
                     <a href="index.php" class="text-muted small text-decoration-none">
-                      <i class="bi bi-arrow-left me-1"></i> Voltar à Homepage
+                      <i class="bi bi-arrow-left me-1"></i> Voltar ao início
                     </a>
                   </div>
                 </div>

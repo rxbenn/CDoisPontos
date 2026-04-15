@@ -6,6 +6,10 @@
   <title>Sobre - CDoisPontos</title>
   <meta name="description" content="Saiba mais sobre a CDoisPontos — mais de 20 anos de experiência em tecnologia, reparações e assistência técnica na Praia da Amorosa, Viana do Castelo.">
 
+  <!-- Fonts -->
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css">
+
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
@@ -36,7 +40,7 @@
             </h1>
             <p class="sobre-hero-text mb-3">
               Loja de tecnologia, reparações e muito mais na Praia da Amorosa.
-              O nosso objetivo é ser a solução certa, seja qual for a tua necessidade.
+              O nosso objetivo é ser a solução certa, seja qual for a sua necessidade.
             </p>
             <div class="sobre-hero-pills">
               <span class="sobre-pill"><i class="bi bi-tools me-1"></i>Reparações</span>
@@ -110,7 +114,7 @@
           <span class="section-eyebrow">O que oferecemos</span>
           <h2 class="section-heading centered d-block mb-1">Serviços da CDoisPontos</h2>
           <p class="text-muted small mb-0">
-            Uma visão mais completa das áreas em que podemos ajudar-te
+            Uma visão mais completa das áreas em que podemos ajudar
           </p>
         </div>
 
@@ -158,7 +162,7 @@
               </div>
               <h3 class="highlight-title">Venda de acessórios</h3>
               <p class="highlight-text mb-0">
-                Cabos, carregadores, capas, periféricos, áudio e outros acessórios para o teu dia a dia.
+                Cabos, carregadores, capas, periféricos, áudio e outros acessórios para o dia a dia.
               </p>
             </div>
           </div>

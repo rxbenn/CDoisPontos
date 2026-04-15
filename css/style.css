@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
 :root {
   --brand-blue: #0d3b5c;
   --brand-orange: #f57c00;
@@ -680,20 +678,11 @@ button:focus-visible,
 }
 
 .cofidis-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, rgba(245, 124, 0, 0.0), rgba(245, 124, 0, 0.08), rgba(245, 124, 0, 0.0));
-  opacity: 0.22;
-  transform: translateX(-40%);
-  transition: transform 700ms ease, opacity 700ms ease;
-  pointer-events: none;
+  content: none;
 }
 
 .cofidis-card:hover::after {
-  opacity: 0.32;
-  transform: translateX(40%);
+  opacity: 0;
 }
 
 .cofidis-card > * {
@@ -839,6 +828,71 @@ button:focus-visible,
   }
   .parcerias-pill {
     transform: none;
+  }
+}
+
+/* ===== COFIDIS ACTIONS ===== */
+.cofidis-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@media (max-width: 576px) {
+  .cofidis-actions {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .cofidis-actions a {
+    width: calc(50% - 5px);
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* ===== AGENTE AUTORIZADO (EXTRA) ===== */
+.agente-notes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.agente-note {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid rgba(13, 59, 92, 0.10);
+  color: #061827;
+  font-weight: 800;
+  font-size: 0.84rem;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.04);
+}
+
+.agente-note i {
+  color: #f57c00;
+}
+
+@media (max-width: 576px) {
+  .agente-notes {
+    gap: 8px;
+    margin-top: 14px !important;
+  }
+  .agente-note {
+    padding: 7px 10px;
+    font-size: 0.78rem;
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.92);
+  }
+  .agente-note i {
+    margin-right: 6px !important;
   }
 }
 
@@ -1029,7 +1083,7 @@ button:focus-visible,
 .pack-logo-pill:nth-child(6) { animation-duration: 7.0s; }
 
 .pack-logo-pill img {
-  height: 30px;
+  height: 28px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -1038,12 +1092,12 @@ button:focus-visible,
 }
 
 .pack-logo-pill img[alt="INPOST"] {
-  height: 34px;
+  height: 32px;
 }
 
 .pack-logo-pill img[alt="DHL"],
 .pack-logo-pill img[alt="SEUR"] {
-  height: 28px;
+  height: 26px;
 }
 
 .pack-visual:hover .pack-logo-pill {

@@ -6,6 +6,10 @@
     <title>Parcerias - CDoisPontos</title>
     <meta name="description" content="Conheça as marcas parceiras da CDoisPontos em Viana do Castelo — hardware, software e equipamentos de topo como Apple, Samsung, Lenovo, HP, ASUS e muito mais.">
 
+    <!-- Fonts -->
+    <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/fonts.css">
+
     <!-- CSS do Bootstrap + o teu CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
@@ -596,7 +600,7 @@
                 <div class="text-center mb-5 mt-4">
                     <span class="section-eyebrow">Soluções digitais</span>
                     <h2 class="section-heading centered d-block">Software de Gestão</h2>
-                    <p class="text-muted mt-2 mb-0" style="max-width:480px;margin:0 auto;">As melhores soluções de software para gerir o teu negócio com eficiência.</p>
+                    <p class="text-muted mt-2 mb-0" style="max-width:480px;margin:0 auto;">Soluções de software para gerir o seu negócio com eficiência.</p>
                 </div>
 
                 <div class="marcas-grid">

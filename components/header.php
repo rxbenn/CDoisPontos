@@ -4,7 +4,7 @@
 
       <!-- LOGO + NOME -->
       <a class="navbar-brand d-flex align-items-center" href="index.php">
-        <img src="imagens/logo.png" alt="CDoisPontos" class="site-logo">
+        <img src="imagens/logo-nav.webp" alt="CDoisPontos" class="site-logo" decoding="async" fetchpriority="high">
         <span class="site-brand ms-2">
             C<span class="brand-accent">Dois</span>Pontos
         </span>

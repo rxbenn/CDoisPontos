@@ -6,13 +6,12 @@
     <title>CDoisPontos — Tecnologia, Reparações e Assistência Técnica na Areosa</title>
     <meta name="description" content="CDoisPontos — loja de tecnologia e assistência técnica na Praia da Amorosa, Viana do Castelo. Reparamos telemóveis, computadores e outros equipamentos. Visita-nos!">
 
-    <!-- Preload de logos (carregamento mais rápido em mobile) -->
-    <link rel="preload" as="image" href="imagens/inpost.png">
-    <link rel="preload" as="image" href="imagens/dpd.png">
-    <link rel="preload" as="image" href="imagens/seur.png">
-    <link rel="preload" as="image" href="imagens/gls.png">
-    <link rel="preload" as="image" href="imagens/dhl.png">
-    <link rel="preload" as="image" href="imagens/celeritas.png">
+    <!-- Fonts -->
+    <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="preload" href="imagens/logo-hero.webp" as="image" type="image/webp" fetchpriority="high">
+    <link rel="preload" href="imagens/gls.png" as="image" type="image/png">
+    <link rel="preload" href="imagens/dhl.png" as="image" type="image/png">
 
     <!-- CSS do Bootstrap + o teu CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -53,7 +52,7 @@
         <!-- Imagem / mockup -->
         <div class="col-lg-6 text-center">
           <div class="hero-card shadow-lg">
-            <img src="imagens/logo.png" alt="Logótipo da CDoisPontos" class="img-fluid hero-image" loading="eager" decoding="async">
+            <img src="imagens/logo-hero.webp" alt="Logótipo da CDoisPontos" class="img-fluid hero-image" loading="eager" fetchpriority="high" decoding="async">
           </div>
         </div>
 
@@ -120,6 +119,206 @@
             </p>
           </article>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PONTO PACK (PONTO DE ENTREGA/RECOLHA) -->
+  <section id="ponto-pack" class="ponto-pack-section">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6 text-center text-lg-start">
+          <span class="section-eyebrow d-inline-block">Ponto Pack</span>
+          <h2 class="section-heading d-block mb-2 text-center text-lg-start">Entrega e recolha de encomendas, num só local</h2>
+          <p class="text-muted pack-subtitle mb-3" style="max-width: 560px;">
+            A <strong>CDoisPontos</strong> é também um <strong>ponto de entrega e recolha</strong> de encomendas.
+            Deixe a sua encomenda connosco e recolha quando lhe for mais conveniente — de forma simples, rápida e segura.
+          </p>
+
+          <div class="pack-benefits d-flex flex-wrap gap-2 mb-4">
+            <span class="pack-chip"><i class="bi bi-clock me-1"></i> Mais flexibilidade</span>
+            <span class="pack-chip"><i class="bi bi-shield-check me-1"></i> Processo seguro</span>
+            <span class="pack-chip"><i class="bi bi-bag-check me-1"></i> Entrega e recolha</span>
+          </div>
+
+          <div class="d-flex flex-wrap gap-3 align-items-center justify-content-center justify-content-lg-start">
+            <a href="ponto-pack.php" class="btn-hero-main animate-soft">
+              <i class="bi bi-info-circle"></i> Saber mais
+            </a>
+            <a href="#localizacao-contactos" class="btn-pack-outline animate-soft">
+              <i class="bi bi-geo-alt me-1"></i> Ver localização
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="pack-visual animate-soft" aria-label="Transportadoras disponíveis no Ponto Pack">
+            <div class="pack-visual-center">
+              <div class="pack-visual-icon">
+                <i class="bi bi-box-seam"></i>
+              </div>
+              <div class="pack-visual-title">Ponto Pack</div>
+              <div class="pack-visual-subtitle">Transportadoras disponíveis</div>
+            </div>
+
+            <!-- Layout criativo (não carrossel): “órbita” de marcas -->
+            <div class="pack-orbit" aria-hidden="true">
+              <div class="pack-logo-pill" style="--x:-135px; --y:-0px; --d: 0ms;">
+                <img src="imagens/inpost.png" alt="INPOST" loading="eager" decoding="async">
+              </div>
+              <div class="pack-logo-pill" style="--x:-75px; --y:-105px; --d: 120ms;">
+                <img src="imagens/dpd.png" alt="DPD" loading="eager" decoding="async">
+              </div>
+              <div class="pack-logo-pill" style="--x:125px; --y:-85px; --d: 240ms;">
+                <img src="imagens/seur.png" alt="SEUR" loading="eager" decoding="async">
+              </div>
+              <div class="pack-logo-pill" style="--x:160px; --y:10px; --d: 360ms;">
+                <img src="imagens/gls.png" alt="GLS" loading="eager" fetchpriority="high" decoding="async">
+              </div>
+              <div class="pack-logo-pill" style="--x:135px; --y:100px; --d: 480ms;">
+                <img src="imagens/dhl.png" alt="DHL" loading="eager" fetchpriority="high" decoding="async">
+              </div>
+              <div class="pack-logo-pill" style="--x:-135px; --y:110px; --d: 600ms;">
+                <img src="imagens/celeritas.png" alt="CELERITAS" loading="eager" decoding="async">
+              </div>
+            </div>
+
+            <!-- Fallback mobile: grelha simples -->
+            <div class="pack-logos-grid" aria-hidden="true">
+              <div class="pack-logo-tile"><img src="imagens/inpost.png" alt="INPOST" loading="lazy" decoding="async"></div>
+              <div class="pack-logo-tile"><img src="imagens/dpd.png" alt="DPD" loading="lazy" decoding="async"></div>
+              <div class="pack-logo-tile"><img src="imagens/seur.png" alt="SEUR" loading="lazy" decoding="async"></div>
+              <div class="pack-logo-tile"><img src="imagens/gls.png" alt="GLS" loading="lazy" decoding="async"></div>
+              <div class="pack-logo-tile"><img src="imagens/dhl.png" alt="DHL" loading="lazy" decoding="async"></div>
+              <div class="pack-logo-tile"><img src="imagens/celeritas.png" alt="CELERITAS" loading="lazy" decoding="async"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGENTE AUTORIZADO -->
+  <section id="agente-autorizado" class="agente-section">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="section-eyebrow">Agente autorizado</span>
+        <h2 class="section-heading centered d-block mb-1">Serviços oficiais das principais operadoras</h2>
+        <p class="text-muted small mb-0">
+          Apoio no atendimento e em processos selecionados, com a comodidade de tratar tudo num só local.
+        </p>
+      </div>
+
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-3 animate-soft">
+          <div class="agente-tile h-100">
+            <img src="imagens/meo.png" alt="MEO" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="col-6 col-md-3 animate-soft">
+          <div class="agente-tile h-100">
+            <img src="imagens/vodafone.png" alt="Vodafone" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="col-6 col-md-3 animate-soft">
+          <div class="agente-tile h-100">
+            <img src="imagens/nos.png" alt="NOS" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="col-6 col-md-3 animate-soft">
+          <div class="agente-tile h-100">
+            <img src="imagens/digi.png" alt="DIGI" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+
+      <div class="agente-notes mt-4">
+        <div class="agente-note"><i class="bi bi-shop me-2"></i>Atendimento em loja</div>
+        <div class="agente-note"><i class="bi bi-shield-check me-2"></i>Processo orientado e seguro</div>
+        <div class="agente-note"><i class="bi bi-clock me-2"></i>Mais comodidade no dia a dia</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COFIDIS PAY -->
+  <section id="cofidis-pay" class="cofidis-section">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="section-eyebrow">Financiamento</span>
+        <h2 class="section-heading centered d-block mb-1">Cofidis Pay</h2>
+        <p class="text-muted small mb-0">Uma forma simples e segura de pagar em prestações.</p>
+      </div>
+
+      <div class="cofidis-card">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-7">
+            <div class="d-flex align-items-center gap-3 flex-wrap cofidis-top">
+              <img src="imagens/cofidispay.webp" alt="Cofidis Pay" class="cofidis-logo" loading="lazy" decoding="async">
+            </div>
+
+            <h2 class="cofidis-title mt-3 mb-2">Pagamentos até 12x sem juros</h2>
+            <p class="cofidis-subtitle mb-3">
+              Uma solução de pagamentos que permite pagar em montantes à sua medida.<br>
+              Sem juros, sem encargos e sem burocracias.
+            </p>
+
+            <div class="cofidis-actions d-none d-lg-flex">
+              <a class="btn-hero-main" href="https://www.cofidis.pt/cofidispay/cliente" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-box-arrow-up-right"></i> Saber mais
+              </a>
+              <a class="btn-pack-outline" href="https://wa.me/351939982878" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-whatsapp"></i> Falar connosco
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="row g-3">
+              <div class="col-6 animate-soft">
+                <div class="cofidis-feature h-100">
+                  <i class="bi bi-credit-card cofidis-icon"></i>
+                  <div class="cofidis-feature-title">Pagamentos até 12x</div>
+                  <div class="cofidis-feature-text">Ao utilizar qualquer tipo de cartão de crédito ou débito.</div>
+                </div>
+              </div>
+              <div class="col-6 animate-soft">
+                <div class="cofidis-feature h-100">
+                  <i class="bi bi-percent cofidis-icon"></i>
+                  <div class="cofidis-feature-title">Sem juros</div>
+                  <div class="cofidis-feature-text">Ou outros custos adicionais sobre os seus pagamentos.</div>
+                </div>
+              </div>
+              <div class="col-6 animate-soft">
+                <div class="cofidis-feature h-100">
+                  <i class="bi bi-phone cofidis-icon"></i>
+                  <div class="cofidis-feature-title">100% digital</div>
+                  <div class="cofidis-feature-text">Processo seguro, imediato e sem papel.</div>
+                </div>
+              </div>
+              <div class="col-6 animate-soft">
+                <div class="cofidis-feature h-100">
+                  <i class="bi bi-sliders2 cofidis-icon"></i>
+                  <div class="cofidis-feature-title">Autonomia total</div>
+                  <div class="cofidis-feature-text">Gestão e controlo das suas operações na App Cofidis.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cofidis-actions d-flex d-lg-none mt-3 justify-content-center">
+              <a class="btn-hero-main" href="https://www.cofidis.pt/cofidispay/cliente" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-box-arrow-up-right"></i> Saber mais
+              </a>
+              <a class="btn-pack-outline" href="https://wa.me/351939982878" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-whatsapp"></i> Falar connosco
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <p class="cofidis-legal mt-4 mb-0">
+          O pagamento das prestações será efetuado no cartão de débito ou crédito do cliente através de solução de pagamento assente em contrato de factoring entre a Cofidis e o comerciante.
+          Informe-se na Cofidis, registada no Banco de Portugal com o nº 921.
+        </p>
       </div>
     </div>
   </section>
@@ -209,182 +408,6 @@
     </div>
   </section>
 
-  <!-- PONTO PACK (PONTO DE ENTREGA/RECOLHA) -->
-  <section id="ponto-pack" class="ponto-pack-section">
-    <div class="container">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-6 text-center text-lg-start">
-          <span class="section-eyebrow d-inline-block">Ponto Pack</span>
-          <h2 class="section-heading d-block mb-2 text-center text-lg-start">Entrega e recolha de encomendas, num só local</h2>
-          <p class="text-muted pack-subtitle mb-3" style="max-width: 560px;">
-            A <strong>CDoisPontos</strong> é também um <strong>ponto de entrega e recolha</strong> de encomendas.
-            Deixe a sua encomenda connosco e recolha quando lhe for mais conveniente — de forma simples, rápida e segura.
-          </p>
-
-          <div class="pack-benefits d-flex flex-wrap gap-2 mb-4">
-            <span class="pack-chip"><i class="bi bi-clock me-1"></i> Mais flexibilidade</span>
-            <span class="pack-chip"><i class="bi bi-shield-check me-1"></i> Processo seguro</span>
-            <span class="pack-chip"><i class="bi bi-bag-check me-1"></i> Entrega e recolha</span>
-          </div>
-
-          <div class="d-flex flex-wrap gap-3 align-items-center justify-content-center justify-content-lg-start">
-            <a href="ponto-pack.php" class="btn-hero-main animate-soft">
-              <i class="bi bi-info-circle"></i> Saber mais
-            </a>
-            <a href="#localizacao-contactos" class="btn-pack-outline animate-soft">
-              <i class="bi bi-geo-alt me-1"></i> Ver localização
-            </a>
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="pack-visual animate-soft" aria-label="Transportadoras disponíveis no Ponto Pack">
-            <div class="pack-visual-center">
-              <div class="pack-visual-icon">
-                <i class="bi bi-box-seam"></i>
-              </div>
-              <div class="pack-visual-title">Ponto Pack</div>
-              <div class="pack-visual-subtitle">Transportadoras disponíveis</div>
-            </div>
-
-            <!-- Layout criativo (não carrossel): “órbita” de marcas -->
-            <div class="pack-orbit" aria-hidden="true">
-              <div class="pack-logo-pill" style="--x:-135px; --y:-0px; --d: 0ms;">
-                <img src="imagens/inpost.png" alt="INPOST" loading="lazy" decoding="async">
-              </div>
-              <div class="pack-logo-pill" style="--x:-75px; --y:-105px; --d: 120ms;">
-                <img src="imagens/dpd.png" alt="DPD" loading="lazy" decoding="async">
-              </div>
-              <div class="pack-logo-pill" style="--x:125px; --y:-85px; --d: 240ms;">
-                <img src="imagens/seur.png" alt="SEUR" loading="lazy" decoding="async">
-              </div>
-              <div class="pack-logo-pill" style="--x:160px; --y:10px; --d: 360ms;">
-                <img src="imagens/gls.png" alt="GLS" loading="lazy" decoding="async">
-              </div>
-              <div class="pack-logo-pill" style="--x:135px; --y:100px; --d: 480ms;">
-                <img src="imagens/dhl.png" alt="DHL" loading="lazy" decoding="async">
-              </div>
-              <div class="pack-logo-pill" style="--x:-135px; --y:110px; --d: 600ms;">
-                <img src="imagens/celeritas.png" alt="CELERITAS" loading="lazy" decoding="async">
-              </div>
-            </div>
-
-            <!-- Fallback mobile: grelha simples -->
-            <div class="pack-logos-grid" aria-hidden="true">
-              <div class="pack-logo-tile"><img src="imagens/inpost.png" alt="INPOST" loading="eager" decoding="async"></div>
-              <div class="pack-logo-tile"><img src="imagens/dpd.png" alt="DPD" loading="eager" decoding="async"></div>
-              <div class="pack-logo-tile"><img src="imagens/seur.png" alt="SEUR" loading="eager" decoding="async"></div>
-              <div class="pack-logo-tile"><img src="imagens/gls.png" alt="GLS" loading="eager" decoding="async"></div>
-              <div class="pack-logo-tile"><img src="imagens/dhl.png" alt="DHL" loading="eager" decoding="async"></div>
-              <div class="pack-logo-tile"><img src="imagens/celeritas.png" alt="CELERITAS" loading="eager" decoding="async"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- AGENTE AUTORIZADO -->
-  <section id="agente-autorizado" class="agente-section">
-    <div class="container">
-      <div class="text-center mb-4">
-        <span class="section-eyebrow">Agente autorizado</span>
-        <h2 class="section-heading centered d-block mb-1">Serviços oficiais das principais operadoras</h2>
-        <p class="text-muted small mb-0">
-          Apoio no atendimento e em processos selecionados, com a comodidade de tratar tudo num só local.
-        </p>
-      </div>
-
-      <div class="row g-3 justify-content-center">
-        <div class="col-6 col-md-3 animate-soft">
-          <div class="agente-tile h-100">
-            <img src="imagens/meo.png" alt="MEO" loading="lazy" decoding="async">
-          </div>
-        </div>
-        <div class="col-6 col-md-3 animate-soft">
-          <div class="agente-tile h-100">
-            <img src="imagens/vodafone.png" alt="Vodafone" loading="lazy" decoding="async">
-          </div>
-        </div>
-        <div class="col-6 col-md-3 animate-soft">
-          <div class="agente-tile h-100">
-            <img src="imagens/nos.png" alt="NOS" loading="lazy" decoding="async">
-          </div>
-        </div>
-        <div class="col-6 col-md-3 animate-soft">
-          <div class="agente-tile h-100">
-            <img src="imagens/digi.png" alt="DIGI" loading="lazy" decoding="async">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- COFIDIS PAY -->
-  <section id="cofidis-pay" class="cofidis-section">
-    <div class="container">
-      <div class="text-center mb-4">
-        <span class="section-eyebrow">Financiamento</span>
-        <h2 class="section-heading centered d-block mb-1">Cofidis Pay</h2>
-        <p class="text-muted small mb-0">Uma forma simples e segura de pagar em prestações.</p>
-      </div>
-
-      <div class="cofidis-card">
-        <div class="row g-4 align-items-center">
-          <div class="col-lg-7">
-            <div class="d-flex align-items-center gap-3 flex-wrap cofidis-top">
-              <img src="imagens/cofidispay.webp" alt="Cofidis Pay" class="cofidis-logo" loading="lazy" decoding="async">
-            </div>
-
-            <h2 class="cofidis-title mt-3 mb-2">Pagamentos até 12x sem juros</h2>
-            <p class="cofidis-subtitle mb-0">
-              Uma solução de pagamentos que permite pagar em montantes à sua medida.<br>
-              Sem juros, sem encargos e sem burocracias.
-            </p>
-          </div>
-
-          <div class="col-lg-5">
-            <div class="row g-3">
-              <div class="col-6 animate-soft">
-                <div class="cofidis-feature h-100">
-                  <i class="bi bi-credit-card cofidis-icon"></i>
-                  <div class="cofidis-feature-title">Pagamentos até 12x</div>
-                  <div class="cofidis-feature-text">Ao utilizar qualquer tipo de cartão de crédito ou débito.</div>
-                </div>
-              </div>
-              <div class="col-6 animate-soft">
-                <div class="cofidis-feature h-100">
-                  <i class="bi bi-percent cofidis-icon"></i>
-                  <div class="cofidis-feature-title">Sem juros</div>
-                  <div class="cofidis-feature-text">Ou outros custos adicionais sobre os seus pagamentos.</div>
-                </div>
-              </div>
-              <div class="col-6 animate-soft">
-                <div class="cofidis-feature h-100">
-                  <i class="bi bi-phone cofidis-icon"></i>
-                  <div class="cofidis-feature-title">100% digital</div>
-                  <div class="cofidis-feature-text">Processo seguro, imediato e sem papel.</div>
-                </div>
-              </div>
-              <div class="col-6 animate-soft">
-                <div class="cofidis-feature h-100">
-                  <i class="bi bi-sliders2 cofidis-icon"></i>
-                  <div class="cofidis-feature-title">Autonomia total</div>
-                  <div class="cofidis-feature-text">Gestão e controlo das suas operações na App Cofidis.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <p class="cofidis-legal mt-4 mb-0">
-          O pagamento das prestações será efetuado no cartão de débito ou crédito do cliente através de solução de pagamento assente em contrato de factoring entre a Cofidis e o comerciante.
-          Informe-se na Cofidis, registada no Banco de Portugal com o nº 921.
-        </p>
-      </div>
-    </div>
-  </section>
-
 <!-- Localização e contactos -->
 <section id="localizacao-contactos">
   <div class="container">
@@ -395,7 +418,7 @@
             <div>
               <span class="section-eyebrow">Onde estamos</span>
               <h3 class="mb-0">Localização e Contactos</h3>
-              <p class="text-muted mb-0 small">Fala connosco ou visita a nossa loja física</p>
+              <p class="text-muted mb-0 small">Fale connosco ou visite a nossa loja física</p>
             </div>
           </div>
 
