@@ -8,7 +8,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-if (empty($_SESSION['contact_form_csrf'])) {
+if (empty($_SESSION['contact_form_csrf']) || !is_string($_SESSION['contact_form_csrf'])) {
     $_SESSION['contact_form_csrf'] = bin2hex(random_bytes(32));
 }
 
@@ -16,11 +16,29 @@ $csrfToken = $_SESSION['contact_form_csrf'];
 
 function envOrDefault(string $key, ?string $default = null): ?string
 {
-    $value = getenv($key);
-    if ($value === false || $value === '') {
-        return $default;
+    $candidates = [];
+
+    // 1) Variáveis expostas pelo SAPI/webserver
+    if (isset($_SERVER[$key])) $candidates[] = $_SERVER[$key];
+    if (isset($_ENV[$key])) $candidates[] = $_ENV[$key];
+
+    // 2) Apache getenv (quando disponível)
+    if (function_exists('apache_getenv')) {
+        $apacheValue = apache_getenv($key, true);
+        if ($apacheValue !== false) $candidates[] = $apacheValue;
     }
-    return $value;
+
+    // 3) getenv normal
+    $envValue = getenv($key);
+    if ($envValue !== false) $candidates[] = $envValue;
+
+    foreach ($candidates as $value) {
+        if (!is_string($value)) continue;
+        $trimmed = trim($value);
+        if ($trimmed !== '') return $trimmed;
+    }
+
+    return $default;
 }
 
 $mensagemStatus = '';
@@ -110,7 +128,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $mail->Host = $smtpHost;
                 $mail->SMTPAuth = true;
                 $mail->Username = $smtpUser;
-                $mail->Password = $smtpPass;
+                // Gmail App Password costuma vir com espaços (xxxx xxxx xxxx xxxx).
+                // Para SMTP deve ir sem espaços.
+                $mail->Password = preg_replace('/\s+/', '', $smtpPass);
                 $mail->Port = $smtpPort;
                 $mail->CharSet = 'UTF-8';
 
@@ -119,6 +139,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 } else {
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                 }
+
             } else {
                 // Fallback local para desenvolvimento.
                 $mail->isMail();
@@ -143,6 +164,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['contact_form_csrf'] = bin2hex(random_bytes(32));
             $csrfToken = $_SESSION['contact_form_csrf'];
         } catch (Exception $e) {
+            error_log('Erro no formulário de contacto CDoisPontos: ' . $e->getMessage());
             $mensagemStatus = '<div class="alert alert-danger py-2 small mb-3">Ocorreu um erro ao enviar a mensagem. Se o problema persistir, contacta-nos via WhatsApp.</div>';
         }
         }

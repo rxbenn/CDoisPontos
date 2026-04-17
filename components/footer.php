@@ -315,11 +315,9 @@
                 }
             };
 
-            if ("requestIdleCallback" in window) {
-                requestIdleCallback(() => initRevealAnimations(), { timeout: 1200 });
-            } else {
-                setTimeout(initRevealAnimations, 120);
-            }
+            // Importante: inicializar "reveal" imediatamente para não deixar ícones/cards
+            // invisíveis no primeiro paint (Lighthouse/TBT + percepção visual).
+            initRevealAnimations();
         });
     </script>
 </footer>
