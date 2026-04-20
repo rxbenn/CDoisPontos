@@ -63,21 +63,21 @@
   <!-- SERVIÇOS PRINCIPAIS -->
   <section id="servicos">
     <div class="container">
-      <div class="position-relative text-center mb-4 pb-2 pb-md-0">
+    <div class="position-relative text-center mb-4 pb-2 pb-md-0">
         <span class="section-eyebrow">O que fazemos</span>
         <h2 class="section-heading centered d-block mb-1">Serviços da CDoisPontos</h2>
         <p class="text-muted small mb-0">Três áreas principais em que podemos ajudar</p>
         
-        <!-- Botão perfeitamente encostado à extrema direita (Apenas em desktop/tablets) -->
-        <div class="position-absolute top-50 end-0 translate-middle-y d-none d-md-block">
+        <!-- Botão à direita apenas em ecrãs muito largos -->
+        <div class="position-absolute top-50 end-0 translate-middle-y d-none d-xl-block">
           <a href="sobre.php#servicos" class="btn btn-outline-secondary btn-sm rounded-pill px-4 shadow-sm animate-soft">
             Ver todos os serviços <i class="bi bi-arrow-right ms-1"></i>
           </a>
         </div>
       </div>
       
-      <!-- Em telemóveis fica centrado abaixo do título em prol da legibilidade do ecrã estreito -->
-      <div class="text-center mb-4 d-block d-md-none">
+      <!-- Em resoluções até desktop "normal", fica centrado abaixo do subtítulo -->
+      <div class="text-center mb-4 d-block d-xl-none">
         <a href="sobre.php#servicos" class="btn btn-outline-secondary btn-sm rounded-pill px-4 shadow-sm animate-soft">
           Ver todos os serviços <i class="bi bi-arrow-right ms-1"></i>
         </a>

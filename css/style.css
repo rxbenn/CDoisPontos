@@ -68,6 +68,41 @@ main {
   margin-right: auto;
 }
 
+/* Header da secção de serviços: evita sobreposição do CTA em tablet */
+.services-head {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.services-head > div {
+  justify-self: center;
+  text-align: center;
+}
+
+.services-head-action {
+  white-space: nowrap;
+  justify-self: center;
+}
+
+/* Ecrãs largos: volta ao comportamento com CTA no canto direito */
+@media (min-width: 1400px) {
+  .services-head {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  .services-head > div {
+    justify-self: center;
+  }
+
+  .services-head-action {
+    justify-self: end;
+  }
+}
+
 /* ===== STAT BAND ===== */
 .stat-band {
   background: #ffffff;
@@ -1750,8 +1785,15 @@ button:focus-visible,
 @media (min-width: 992px) {
   .map-wrapper-location {
     padding-bottom: 0;
-    min-height: 250px; /* Segurança para não colapsar */
-    height: 100%;
+    min-height: 260px;
+    height: clamp(260px, 44vh, 420px);
+  }
+}
+
+/* Laptop/Zenbook: mapa um pouco mais compacto para não dominar a secção */
+@media (min-width: 992px) and (max-width: 1440px) {
+  .map-wrapper-location {
+    height: clamp(250px, 38vh, 360px);
   }
 }
 
