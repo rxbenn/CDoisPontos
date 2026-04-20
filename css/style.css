@@ -9,14 +9,14 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 40px;
-  /* compensar o header sticky (altura aproximada da navbar) */
+  scroll-padding-top: 84px;
+  /* compensar o header sticky (evita cortar secções por âncoras) */
 }
 
 /* Evita scroll horizontal acidental em ecrãs muito estreitos */
 html,
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -180,6 +180,18 @@ button:focus-visible,
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   transition: background 220ms ease, border-color 220ms ease, box-shadow 220ms ease, backdrop-filter 220ms ease;
+}
+
+@media (max-width: 991px) {
+  html {
+    scroll-padding-top: 74px;
+  }
+
+  .site-header {
+    /* Em mobile mantém o efeito, mas mais leve para fluidez */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
 }
 
 .site-header.is-scrolled {
