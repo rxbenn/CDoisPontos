@@ -3,6 +3,17 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
+use Dotenv\Dotenv;
+
+// Carregar variáveis de ambiente do ficheiro .env
+try {
+    if (file_exists(__DIR__ . '/.env')) {
+        $dotenv = Dotenv::createImmutable(__DIR__);
+        $dotenv->safeLoad();
+    }
+} catch (\Exception $e) {
+    error_log("Erro ao carregar .env: " . $e->getMessage());
+}
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
@@ -93,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } elseif (is_int($lastSubmission) && ($now - $lastSubmission) < $minSecondsBetweenSubmissions) {
             $mensagemStatus = '<div class="alert alert-danger py-2 small mb-3">Aguarde alguns segundos antes de enviar outra mensagem.</div>';
         } else {
-        $destinatario = 'lojacdoispontos@gmail.com'; // Coloca aqui o email onde queres receber as mensagens
+        $destinatario = envOrDefault('MAIL_DESTINATARIO', 'lojacdoispontos@gmail.com'); // Coloca aqui o email onde queres receber as mensagens
         $assunto_email = "Novo Contacto do Site: $assunto";
         
         $conteudo = "Novo Contacto - Site CDoisPontos\n";
@@ -115,13 +126,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // MAIL_USERNAME=...
             // MAIL_PASSWORD=...
             // MAIL_ENCRYPTION=tls
-            $smtpHost = 'smtp.gmail.com';
-            $smtpPort = 587;
-            $smtpUser = 'lojacdoispontos@gmail.com';
-            $smtpPass = 'ljziuwddaxxokadr'; // Password de Aplicação do Google (16 letras)
-            $smtpEncryption = 'tls'; // tls ou ssl
-            $mailFromAddress = 'lojacdoispontos@gmail.com';
-            $mailFromName = 'Site CDoisPontos';
+            $smtpHost = envOrDefault('MAIL_HOST', 'smtp.gmail.com');
+            $smtpPort = (int)envOrDefault('MAIL_PORT', '587');
+            $smtpUser = envOrDefault('MAIL_USERNAME', 'lojacdoispontos@gmail.com');
+            $smtpPass = envOrDefault('MAIL_PASSWORD', 'ljziuwddaxxokadr'); // Password de Aplicação do Google (16 letras)
+            $smtpEncryption = envOrDefault('MAIL_ENCRYPTION', 'tls'); // tls ou ssl
+            $mailFromAddress = envOrDefault('MAIL_FROM_ADDRESS', 'lojacdoispontos@gmail.com');
+            $mailFromName = envOrDefault('MAIL_FROM_NAME', 'Site CDoisPontos');
 
             if ($smtpHost && $smtpUser && $smtpPass) {
                 $mail->isSMTP();
