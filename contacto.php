@@ -93,7 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } elseif (is_int($lastSubmission) && ($now - $lastSubmission) < $minSecondsBetweenSubmissions) {
             $mensagemStatus = '<div class="alert alert-danger py-2 small mb-3">Aguarde alguns segundos antes de enviar outra mensagem.</div>';
         } else {
-        $destinatario = envOrDefault('MAIL_TO', 'geral@c2pontosamorosa.pt');
+        $destinatario = 'lojacdoispontos@gmail.com'; // Coloca aqui o email onde queres receber as mensagens
         $assunto_email = "Novo Contacto do Site: $assunto";
         
         $conteudo = "Novo Contacto - Site CDoisPontos\n";
@@ -115,13 +115,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // MAIL_USERNAME=...
             // MAIL_PASSWORD=...
             // MAIL_ENCRYPTION=tls
-            $smtpHost = envOrDefault('MAIL_HOST');
-            $smtpPort = (int)envOrDefault('MAIL_PORT', '587');
-            $smtpUser = envOrDefault('MAIL_USERNAME');
-            $smtpPass = envOrDefault('MAIL_PASSWORD');
-            $smtpEncryption = envOrDefault('MAIL_ENCRYPTION', 'tls'); // tls | ssl
-            $mailFromAddress = envOrDefault('MAIL_FROM_ADDRESS', 'noreply@cdoispontos.pt');
-            $mailFromName = envOrDefault('MAIL_FROM_NAME', 'CDoisPontos Website');
+            $smtpHost = 'smtp.gmail.com';
+            $smtpPort = 587;
+            $smtpUser = 'lojacdoispontos@gmail.com';
+            $smtpPass = 'ljziuwddaxxokadr'; // Password de Aplicação do Google (16 letras)
+            $smtpEncryption = 'tls'; // tls ou ssl
+            $mailFromAddress = 'lojacdoispontos@gmail.com';
+            $mailFromName = 'Site CDoisPontos';
 
             if ($smtpHost && $smtpUser && $smtpPass) {
                 $mail->isSMTP();
@@ -171,6 +171,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -186,7 +187,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=2">
   <link rel="icon" type="image/png" href="imagens/logo.png">
 </head>
 <body class="contacto-page">

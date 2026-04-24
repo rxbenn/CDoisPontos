@@ -13,7 +13,7 @@
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=2">
   <link rel="icon" type="image/png" href="imagens/logo.png">
 </head>
 <body class="sobre-page">
@@ -34,7 +34,7 @@
 
         <div class="row align-items-center g-4">
           <div class="col-lg-7">
-            <span class="section-eyebrow">Desde 2003 na Areosa</span>
+            <span class="section-eyebrow">Desde 2003 na Amorosa</span>
             <h1 class="sobre-hero-title">
               Sobre a <span class="brand-accent">CDoisPontos</span>
             </h1>
@@ -106,6 +106,7 @@
         </div>
       </div>
     </section>
+    
     
     <!-- SERVIÇOS DETALHADOS -->
     <section id="servicos" class="sobre-section sobre-areas">

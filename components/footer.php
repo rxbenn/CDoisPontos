@@ -80,16 +80,26 @@
             </li>
           </ul>
           
-          <!-- Segue-nos visível logo abaixo dos contactos no Mobile -->
+          <!-- Segue-nos + Créditos no Mobile -->
           <div class="d-md-none mt-4">
-            <h5 class="footer-title mb-2">Segue-nos</h5>
-            <div class="footer-social d-flex flex-wrap gap-2">
-              <a href="https://www.facebook.com/cdoispontos" target="_blank" rel="noopener noreferrer" class="footer-social-btn facebook">
-                <i class="bi bi-facebook"></i>
-              </a>
-              <a href="https://wa.me/351939982878" target="_blank" rel="noopener noreferrer" class="footer-social-btn whatsapp">
-                <i class="bi bi-whatsapp"></i>
-              </a>
+            <div class="row g-0 align-items-end">
+              <div class="col-6">
+                <h5 class="footer-title mb-2">Segue-nos</h5>
+                <div class="footer-social d-flex gap-2">
+                  <a href="https://www.facebook.com/cdoispontos" target="_blank" rel="noopener noreferrer" class="footer-social-btn facebook">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                  <a href="https://wa.me/351939982878" target="_blank" rel="noopener noreferrer" class="footer-social-btn whatsapp">
+                    <i class="bi bi-whatsapp"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="col-6 pb-1">
+                <p class="mb-0 opacity-85" style="font-size: 0.72rem; line-height: 1.2;">
+                  <i class="bi bi-code-slash me-1" style="color: #f57c00;"></i> Website desenvolvido por <br>
+                  <span class="text-white fw-bold">Rúben Lourenço</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -103,7 +113,7 @@
           </ul>
 
           <h5 class="footer-title mb-2">Segue-nos</h5>
-          <div class="footer-social d-flex flex-wrap gap-2">
+          <div class="footer-social d-flex flex-wrap gap-2 mb-3">
             <a href="https://www.facebook.com/cdoispontos" target="_blank" rel="noopener noreferrer" class="footer-social-btn facebook">
               <i class="bi bi-facebook"></i>
             </a>
@@ -111,6 +121,10 @@
               <i class="bi bi-whatsapp"></i>
             </a>
           </div>
+          <p class="mb-0 opacity-90 small" style="font-size: 0.8rem; line-height: 1.3;">
+            <i class="bi bi-code-slash me-1" style="color: #f57c00;"></i> Website desenvolvido por <br>
+            <span class="text-white fw-bold">Rúben Lourenço</span>
+          </p>
         </div>
 
       </div>
@@ -132,23 +146,23 @@
     </a>
 
     <!-- BANNER DE COOKIES (RGPD) -->
-    <div id="cookieConsentBanner" class="cookie-banner" style="display: none;">
-        <div class="cookie-content">
+    <div id="avisoPrivacidadeBarra" class="aviso-rgpd-banner" style="display: none;">
+        <div class="aviso-rgpd-conteudo">
             <i class="bi bi-info-circle-fill text-warning me-2"></i>
             <span>Utilizamos cookies estritamente essenciais para garantir o funcionamento correto e fluído do site. <span style="white-space: nowrap;"><a href="politica-privacidade.php" class="text-white text-decoration-underline ms-1 fw-bold">Saber mais</a></span></span>
         </div>
-        <div class="cookie-actions">
-            <button id="btnRejectCookies" class="btn-cookie-outline">Rejeitar</button>
-            <button id="btnAcceptCookies" class="btn-cookie">Aceitar</button>
+        <div class="aviso-rgpd-accoes">
+            <button id="btnRejeitarRgpd" class="btn-rgpd-rejeitar">Rejeitar</button>
+            <button id="btnAceitarRgpd" class="btn-rgpd-aceitar">Aceitar</button>
         </div>
     </div>
 
     <!-- SCRIPT DE ACEITAÇÃO LOGADA NO LOCALSTORAGE -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const cookieBanner = document.getElementById("cookieConsentBanner");
-            const acceptBtn = document.getElementById("btnAcceptCookies");
-            const rejectBtn = document.getElementById("btnRejectCookies");
+            const rgpdBanner = document.getElementById("avisoPrivacidadeBarra");
+            const acceptBtn = document.getElementById("btnAceitarRgpd");
+            const rejectBtn = document.getElementById("btnRejeitarRgpd");
             const whatsappBtn = document.querySelector(".whatsapp-float");
             const siteHeader = document.querySelector(".site-header");
 
@@ -206,7 +220,7 @@
             consentValue = getConsent();
 
             if (!consentValue) {
-                cookieBanner.style.display = "flex";
+                rgpdBanner.style.display = "flex";
                 // Move o WhatsApp para cima se o banner estiver visível
                 if (whatsappBtn) {
                     if (window.innerWidth < 991) {
@@ -219,7 +233,7 @@
 
             const handleConsent = (decision) => {
                 setConsent(decision);
-                cookieBanner.style.display = "none";
+                rgpdBanner.style.display = "none";
                 // Repõe o WhatsApp na posição original
                 if (whatsappBtn) {
                     whatsappBtn.style.bottom = "25px";

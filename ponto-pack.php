@@ -13,7 +13,7 @@
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=2">
   <link rel="icon" type="image/png" href="imagens/logo.png">
 </head>
 <body class="sobre-page">
@@ -92,6 +92,7 @@
 
     <!-- TRANSPORTADORAS -->
     <section class="sobre-section pt-4">
+      
       <div class="container">
         <div class="text-center mb-4">
           <span class="section-eyebrow">Transportadoras</span>
