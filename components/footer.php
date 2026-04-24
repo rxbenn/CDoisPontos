@@ -282,7 +282,7 @@
             // Reveal-on-scroll discreto para cartões
             const initRevealAnimations = () => {
                 const revealTargets = document.querySelectorAll(
-                    ".animate-soft, .sobre-timeline-item, .marcas-grid .brand-logo-item, .pack-logo-tile, .agente-tile, .cofidis-feature, .accordion .accordion-item"
+                    ".animate-soft, .sobre-timeline-item, .marcas-grid .brand-logo-item, .pack-logo-tile, .agente-tile, .cofidis-feature, .review-card, .accordion .accordion-item"
                 );
 
                 if (!revealTargets.length) return;
