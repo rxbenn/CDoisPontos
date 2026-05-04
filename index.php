@@ -412,9 +412,9 @@
   <section id="avaliacoes" class="reviews-section">
     <div class="container">
       <div class="text-center mb-4">
-        <span class="section-eyebrow">O que dizem os nossos clientes</span>
-        <h2 class="section-heading centered d-block mb-1">Avaliações reais</h2>
-        <p class="text-muted small mb-0">Experiências reais, partilhadas pelos nossos clientes.</p>
+        <span class="section-eyebrow">Avaliações no Google</span>
+        <h2 class="section-heading centered d-block mb-1">O que dizem os nossos clientes</h2>
+        <p class="text-muted small mb-0">Experiências reais, partilhadas por quem já nos visitou.</p>
       </div>
 
       <!-- Destaque da classificação média -->
